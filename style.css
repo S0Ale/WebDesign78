@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* #ciao{
+    background-image: url("orso1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 1s ease;
+}
+
+#ciao:hover{
+    background-image: url("orso2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 1s ease;
+} */
