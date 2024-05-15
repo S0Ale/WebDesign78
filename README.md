@@ -5,7 +5,7 @@
 - comando `npm run dev`, cliccare sul link in output per visualizzare nel browser
 
 ## Preview del sito in produzione
-- comando `npm, run build`
+- comando `npm run build`
 - comando `npm run preview`, cliccare sul link per visualizzare nel browser
 
 ## Deploy
