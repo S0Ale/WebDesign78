@@ -9,85 +9,20 @@
     font-family: sans-serif, 'Montserrat', 'DM Serif Display', serif;
 }
 
-body{
-    background-color: #f0f0f0;
-    width: 100%;
-    height: 100%;
-}
-
-a{
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-}
-
-a:hover{
-    font-weight: bold;
-}
-
-.header{
-    padding: 20px 10px;
-    /* border: 2px solid red; */
-    width: 100%;
-    height: 15%;
-    display: flex;
-    flex-direction: row;
-}
-
-.navbar{
-    /* border: 1px solid black; */
-    width: 50%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.logo{
-    width: 25%;
-    /* border: 1px solid blue; */
-}
-
-.links{
-    width: 75%;
-    /* border: 2px solid orange; */
-}
-
-.links ul{
-    list-style: none;
-    display: flex;
-}
-
-.links ul li{
-    padding: 10px 0px;
-    width: 33%;
-    /* border: 1px solid green; */
-    margin: 0 10px;
-    display: flex;
-    flex-direction: row;
+main{
     align-items: center;
     justify-content: center;
 }
 
-.main{
-    height: 75%;
-    padding-top: 20vh;
-    padding-bottom: 20vh;
-    /* border: 1px solid black; */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.main h1{
+main h1{
     font-size: 5em;
 }
 
-.main p{
+main p{
     font-size: 2em;
 }
 
-.main *{
+main *{
     margin: 10px 0;
 }
 
@@ -101,19 +36,16 @@ a:hover{
     border: none;   
     border-radius: 16px;
     background-color: rgb(162, 162, 162);
-    color: rgb(23, 23, 23);
     font-weight: 550;
 }
 
-#start:hover{
+#start:hover, #start:focus{
     background-color: rgb(177, 177, 177);
-    color: rgb(23,23,23);
     transition: 0.5s ease;
 }
 
 #start:active{
     background-color: rgb(203, 203, 203);
-    color: rgb(23,23,23);
 }
 
 .share{
