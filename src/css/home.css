@@ -1,0 +1,84 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif, 'Montserrat', 'DM Serif Display', serif;
+}
+
+main{
+    align-items: center;
+    justify-content: center;
+}
+
+main h1{
+    font-size: 5em;
+}
+
+main p{
+    font-size: 2em;
+}
+
+main *{
+    margin: 10px 0;
+}
+
+.description{
+    width: 25%;
+    text-align: center;
+}
+
+#start{
+    padding: 10px 30px;
+    border: none;   
+    border-radius: 16px;
+    background-color: rgb(162, 162, 162);
+    font-weight: 550;
+}
+
+#start:hover, #start:focus{
+    background-color: rgb(177, 177, 177);
+    transition: 0.5s ease;
+}
+
+#start:active{
+    background-color: rgb(203, 203, 203);
+}
+
+.share{
+    margin-left: 15px;
+    /* border: 1px solid black; */
+    width: 25%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer ul{
+    list-style: none;
+    display: flex;
+}
+
+.footer ul li{
+    margin: 0 10px;
+
+}
+
+/* #ciao{
+    background-image: url("orso1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 1s ease;
+}
+
+#ciao:hover{
+    background-image: url("orso2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 1s ease;
+} */
