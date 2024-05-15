@@ -10,7 +10,7 @@ import Home from './sections/Home';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/WebDesign78/",
     element: <Home/>,
   },
 
