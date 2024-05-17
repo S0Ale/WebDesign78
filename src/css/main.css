@@ -50,6 +50,28 @@
     filter: blur(2px);
 }
 
+.gen-btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: var(--button);
+    transition: background .2s;
+}
+
+.gen-btn:hover, .gen-btn:focus{
+    background: var(--button-hover);
+}
+
+.gen-btn:active{
+    background: var(--button-active);
+}
+
+.front-btn{
+    border-radius: 100px;
+    font-weight: 550;
+    padding: 10px 30px;
+}
+
 /* -- Elements -- */
 
 #viewport{
@@ -71,6 +93,13 @@ a{
     text-decoration: none;
 }
 
+footer{
+    position: fixed;
+    bottom: 0;
+    padding: 10px 20px;
+    color: var(--text);
+}
+
 /* -- Navbar -- */
 
 nav{
@@ -89,10 +118,31 @@ nav{
 }
 
 .nav-link{
+    position: relative;
     margin: 0 10px;
     padding: 0 20px;
     color: inherit;
 }
-.nav-link:hover{
-    text-decoration: underline;
+.nav-link::after{
+    position: absolute;
+    content: '';
+    display: block;
+    height: 2px;
+    bottom: -2px;
+    left: 20px;
+    right: 20px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: var(--text);
+    transition: transform .2s;
+}
+.nav-link:hover::after{
+    transform: scaleX(1);
+}
+
+/* -- Footer -- */
+
+.social-row{
+    margin-left: 20px;
+    width: fit-content;
 }
