@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Link } from "react-router-dom";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -7,11 +8,16 @@ import {
 
 import App from './App';
 import Home from './sections/Home';
+import Article from './sections/Article';
 
 const router = createBrowserRouter([
   {
     path: "/WebDesign78/",
     element: <Home/>,
+  },
+  {
+    path: "/WebDesign78/",
+    element: <Article/>,
   },
 
 ]);
@@ -21,3 +27,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App><RouterProvider router={router}/></App>
   </React.StrictMode>,
 )
+
