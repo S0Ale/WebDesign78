@@ -1,0 +1,42 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    user-select: none; /* Prevents text selection while dragging */
+}
+
+.container {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+}
+
+.container:active {
+    cursor: grabbing;
+}
+
+.card {
+    width: 150px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
