@@ -1,39 +1,49 @@
-// script.js
-const container = document.getElementById('draggable');
+document.addEventListener('DOMContentLoaded', function() {
+    let isDragging = false;
+    let initialMouseX, initialMouseY;
+    let initialContainerX = 0;
+    let initialContainerY = 0;
+    let gridItems;
 
-let isDown = false;
-let startX, startY;
+    const gridContainer = document.querySelector('.grid-container');
 
-container.addEventListener('mousedown', (e) => {
-    isDown = true;
-    container.classList.add('active');
-    startX = e.pageX - container.offsetLeft;
-    startY = e.pageY - container.offsetTop;
+    gridContainer.addEventListener('mousedown', function(e) {
+        isDragging = true;
+        initialMouseX = e.clientX;
+        initialMouseY = e.clientY;
+        initialContainerX = gridContainer.scrollLeft;
+        initialContainerY = gridContainer.scrollTop;
+        gridContainer.style.cursor = 'grabbing';
+    });
+
+    document.addEventListener('mousemove', function(e) {
+        if (isDragging) {
+            const deltaX = e.clientX - initialMouseX;
+            const deltaY = e.clientY - initialMouseY;
+            gridItems.forEach(item => {
+                const itemX = parseInt(item.style.left || item.dataset.startX) + deltaX;
+                const itemY = parseInt(item.style.top || item.dataset.startY) + deltaY;
+                item.style.left = `${itemX}px`;
+                item.style.top = `${itemY}px`;
+            });
+            initialMouseX = e.clientX;
+            initialMouseY = e.clientY;
+        }
+    });
+
+    document.addEventListener('mouseup', function(e) {
+        if (isDragging) {
+            isDragging = false;
+            gridContainer.style.cursor = 'grab';
+        }
+    });
+
+    // Select all grid items
+    gridItems = document.querySelectorAll('.grid-item');
+
+    // Store initial position for each grid item
+    gridItems.forEach(item => {
+        item.dataset.startX = item.offsetLeft;
+        item.dataset.startY = item.offsetTop;
+    });
 });
-
-container.addEventListener('mouseleave', () => {
-    isDown = false;
-    container.classList.remove('active');
-});
-
-container.addEventListener('mouseup', () => {
-    isDown = false;
-    container.classList.remove('active');
-});
-
-container.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - container.offsetLeft;
-    const y = e.pageY - container.offsetTop;
-    const walkX = (x - startX) * 2; // Adjust scroll speed
-    const walkY = (y - startY) * 2; // Adjust scroll speed
-    container.style.left = `${container.offsetLeft + walkX}px`;
-    container.style.top = `${container.offsetTop + walkY}px`;
-    startX = e.pageX - container.offsetLeft;
-    startY = e.pageY - container.offsetTop;
-});
-
-function showCardDetail(cardName) {
-    alert(`You clicked on ${cardName}`);
-}
