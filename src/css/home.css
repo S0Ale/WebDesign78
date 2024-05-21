@@ -1,13 +1,8 @@
+/*Stile per Home.jsx*/
+
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif, 'Montserrat', 'DM Serif Display', serif;
-}
 
 main{
     align-items: center;

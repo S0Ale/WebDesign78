@@ -1,3 +1,5 @@
+/*Stili applicati ad ogni pagina*/
+
 @import url(variables.css);
 @import url(reset.css);
 
@@ -86,7 +88,7 @@ body{
 
 main{
     padding: 20vh 0;
-    height: calc(100% - 80px);
+    height: 100%;
 }
 
 a{
