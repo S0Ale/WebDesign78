@@ -109,6 +109,20 @@ footer{
     color: var(--text);
 }
 
+footer a{
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+footer svg{
+    height: 1.5em !important;
+    color: var(--text);
+    transition: color .2s;
+}
+footer svg:hover{
+    color: var(--text-hover);
+}
+
 /* -- Navbar -- */
 
 nav{
