@@ -10,3 +10,8 @@
 
 ## Deploy
 Ad ogni push nella branch dev, viene effettuato il deploy su Github Pages su questo [link](https://s0ale.github.io/WebDesign78/).
+
+## TODO
+- Sezione articoli con drag
+- Soluzione per animazioni
+- Provare animazioni con routing di React

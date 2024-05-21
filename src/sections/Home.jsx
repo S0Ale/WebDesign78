@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../css/home.css';
 
 const Home = () => {
@@ -10,7 +11,8 @@ const Home = () => {
             <p>Breve descrizione dell'intento del progetto</p>
         </div>
         <div className="start">
-            <button id="start" className="gen-btn front-btn">START</button>
+            
+            <Link to="article" className="gen-btn front-btn">Start</Link>
         </div>
     </main>
   );

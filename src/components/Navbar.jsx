@@ -2,7 +2,7 @@ const Navbar = () => {
     return (
         <nav className="col-12 flex row">
             <div className="logo">
-                <img src="logo.png" alt="LOGO"/>
+                <img src="Images/logo_prova.png" alt=""/>
             </div>
             <div className="h-fluid flex row links">
                 <a href="" className="nav-link">Home</a>
