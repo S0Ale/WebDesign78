@@ -1,0 +1,154 @@
+@import url(variables.css);
+@import url(reset.css);
+
+.col-1 {width: 8.33%;}
+.col-6 {width: 50%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-12 {width: 100%;}
+
+.layer1{z-index: 1;}
+.layer2{z-index: 2;}
+
+.debug1{border: 1px solid red;}
+.debug2{border: 1px solid blue;}
+.debug3{border: 1px solid green;}
+.debug4{border: 1px solid aqua;}
+
+:root{
+    font-family: var(--family);
+}
+
+/* -- Generics -- */
+
+.h-fluid{
+    height: 100%;
+}
+
+.grid{
+    display: grid;
+}
+
+.flex{
+    display: flex;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.row{
+    flex-direction: row;
+}
+
+.transparent{
+    background: transparent;
+}
+
+.blurred{
+    filter: blur(2px);
+}
+
+.gen-btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: var(--button);
+    transition: background .2s;
+}
+
+.gen-btn:hover, .gen-btn:focus{
+    background: var(--button-hover);
+}
+
+.gen-btn:active{
+    background: var(--button-active);
+}
+
+.front-btn{
+    border-radius: 100px;
+    font-weight: 550;
+    padding: 10px 30px;
+}
+
+/* -- Elements -- */
+
+#viewport{
+    height: 100vh;
+    width: 100%;
+}
+
+body{
+    background: var(--bgnd);
+    color: var(--text);
+}
+
+main{
+    padding: 20vh 0;
+    height: calc(100% - 80px);
+}
+
+a{
+    text-decoration: none;
+}
+
+footer{
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    padding: 10px 20px;
+    color: var(--text);
+}
+
+/* -- Navbar -- */
+
+nav{
+    position: fixed;
+    height: 80px;
+    align-items: center;
+}
+
+.logo{
+    padding: 0 25px;
+    margin-right: 100px;
+}
+
+.links{
+    align-items: center
+}
+
+.nav-link{
+    position: relative;
+    margin: 0 10px;
+    padding: 0 20px;
+    color: inherit;
+}
+.nav-link::after{
+    position: absolute;
+    content: '';
+    display: block;
+    height: 2px;
+    bottom: -2px;
+    left: 20px;
+    right: 20px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: var(--text);
+    transition: transform .2s;
+}
+.nav-link:hover::after{
+    transform: scaleX(1);
+}
+
+/* -- Footer -- */
+
+.social-row{
+    margin-left: 20px;
+    width: fit-content;
+}
+
+.social-row a{
+    margin: 0 10px;
+    padding: 10px;
+}
