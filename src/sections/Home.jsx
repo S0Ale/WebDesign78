@@ -10,7 +10,7 @@ const Home = () => {
             <p>Breve descrizione dell'intento del progetto</p>
         </div>
         <div className="start">
-            <button id="start">START</button>
+            <button id="start" className="gen-btn front-btn">START</button>
         </div>
     </main>
   );

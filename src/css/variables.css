@@ -6,5 +6,9 @@
 
     --bgnd: #f0f0f0;
 
+    --button: #a2a2a2;
+    --button-hover: #b1b1b1;
+    --button-active: #8c8c8c;
+
     --text: #272727;
 }

@@ -50,15 +50,33 @@
     filter: blur(2px);
 }
 
-/* -- Elements -- */
-
-#root{
-    border: 1px solid green;
+.gen-btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: var(--button);
+    transition: background .2s;
 }
+
+.gen-btn:hover, .gen-btn:focus{
+    background: var(--button-hover);
+}
+
+.gen-btn:active{
+    background: var(--button-active);
+}
+
+.front-btn{
+    border-radius: 100px;
+    font-weight: 550;
+    padding: 10px 30px;
+}
+
+/* -- Elements -- */
 
 #viewport{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 }
 
 body{
@@ -75,6 +93,14 @@ a{
     text-decoration: none;
 }
 
+footer{
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    padding: 10px 20px;
+    color: var(--text);
+}
+
 /* -- Navbar -- */
 
 nav{
@@ -85,7 +111,7 @@ nav{
 
 .logo{
     padding: 0 25px;
-    margin-right: 75px;
+    margin-right: 100px;
 }
 
 .links{
@@ -93,9 +119,36 @@ nav{
 }
 
 .nav-link{
-    padding: 0 15px;
+    position: relative;
+    margin: 0 10px;
+    padding: 0 20px;
     color: inherit;
 }
-.nav-link:hover{
-    text-decoration: underline;
+.nav-link::after{
+    position: absolute;
+    content: '';
+    display: block;
+    height: 2px;
+    bottom: -2px;
+    left: 20px;
+    right: 20px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: var(--text);
+    transition: transform .2s;
+}
+.nav-link:hover::after{
+    transform: scaleX(1);
+}
+
+/* -- Footer -- */
+
+.social-row{
+    margin-left: 20px;
+    width: fit-content;
+}
+
+.social-row a{
+    margin: 0 10px;
+    padding: 10px;
 }
