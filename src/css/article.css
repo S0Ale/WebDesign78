@@ -15,7 +15,7 @@ article{
     width: 650px;
     height: 400px;
     overflow: hidden;          /* Nasconde il contenuto che eccede */
-    white-space: nowrap;       /* Impedisce la rottura del testo su più righe */
+     /* Impedisce la rottura del testo su più righe */
     text-overflow: ellipsis;   /* Aggiunge i puntini di sospensione per il testo che eccede */
     border: 1px solid #000;    /* Bordo del contenitore per la visualizzazione */
     padding: 10px; 
@@ -28,9 +28,15 @@ article{
     margin: 15px 30px;
 }
 
-.article_textbox p{
+.article_textbox h2{
     font-size: 1.5em;
     margin: 0px 30px;
+}
+
+.article_textbox p{
+    font-size: 1.2em;
+    margin: 0px 30px;
+    height: 100%;
 }
 
 .read_more{
@@ -40,7 +46,7 @@ article{
     width: 100px;
     font-weight: 600;
     font-size: 1.5em;
-    right: 375px;
+    right: 20%;
     bottom: 260px;
     transition: background-color 0.25s ease;
 }
