@@ -14,6 +14,11 @@ article{
 .article_textbox{
     width: 650px;
     height: 400px;
+    overflow: hidden;          /* Nasconde il contenuto che eccede */
+    white-space: nowrap;       /* Impedisce la rottura del testo su più righe */
+    text-overflow: ellipsis;   /* Aggiunge i puntini di sospensione per il testo che eccede */
+    border: 1px solid #000;    /* Bordo del contenitore per la visualizzazione */
+    padding: 10px; 
     background-color: hsl(0, 0%, 65%);
 }
 
