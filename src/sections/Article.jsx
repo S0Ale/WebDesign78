@@ -7,24 +7,28 @@ const Article = () => {
     const maxCount = 4;
     const [id, setCount] = useState(minCount);
     const [content, setContent] = useState('');
+    const [classe, setClasse] = useState('article_textbox');
     
     const increment = () => {
         setCount(prevCount => {
-        setContent('');
-        if(prevCount >= maxCount) return 0;
-        else return prevCount+1;
+            setClasse('article_textbox');
+            setContent('');
+            if(prevCount >= maxCount) return 0;
+            else return prevCount+1;
         });
     };
 
     const decrement = () => {
         setCount(prevCount => {
-        setContent('');
-        if (prevCount <= minCount) return 4;
-        else return prevCount-1;
+            setClasse('article_textbox');
+            setContent('');
+            if (prevCount <= minCount) return 4;
+            else return prevCount-1;
         });
     };
 
     const addText = () => {
+        setClasse('article_textbox_expand');
         setContent(data.articles[id].content);
       };
 
@@ -36,7 +40,7 @@ const Article = () => {
                 <p id='total_slide'>{maxCount+1}</p>
             </div>
             <div>
-                <div className="article_textbox flex column">
+                <div className={classe}>
                     <h1 id="title">{data.articles[id].title}</h1>
                     <h2 id="subtitle">{data.articles[id].subtitle}</h2>
                     <p id="content">{content}</p>

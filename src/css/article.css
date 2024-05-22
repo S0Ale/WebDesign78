@@ -14,10 +14,8 @@ article{
 .article_textbox{
     width: 650px;
     height: 400px;
-    overflow: hidden;          /* Nasconde il contenuto che eccede */
-     /* Impedisce la rottura del testo su più righe */
-    text-overflow: ellipsis;   /* Aggiunge i puntini di sospensione per il testo che eccede */
-    border: 1px solid #000;    /* Bordo del contenitore per la visualizzazione */
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding: 10px; 
     background-color: hsl(0, 0%, 65%);
 }
@@ -34,6 +32,32 @@ article{
 }
 
 .article_textbox p{
+    font-size: 1.2em;
+    margin: 0px 30px;
+    height: 100%;
+}
+
+.article_textbox_expand{
+    width: 650px;
+    height: 550px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px; 
+    background-color: hsl(0, 0%, 65%);
+}
+
+.article_textbox_expand h1{
+    font-size: 3em;
+    font-weight: bold;
+    margin: 15px 30px;
+}
+
+.article_textbox_expand h2{
+    font-size: 1.3em;
+    margin: 0px 30px;
+}
+
+.article_textbox_expand p{
     font-size: 1.2em;
     margin: 0px 30px;
     height: 100%;
