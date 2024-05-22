@@ -6,6 +6,7 @@ import {
   RouterProvider,
   Route
 } from "react-router-dom";
+import { AnimatePresence } from 'framer-motion';
 
 import App from './App';
 import Home from './sections/Home';
@@ -26,7 +27,9 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App><RouterProvider router={router}/></App>
+    <App>
+      <AnimatePresence><RouterProvider router={router}/></AnimatePresence>
+    </App>
   </React.StrictMode>,
 )
 

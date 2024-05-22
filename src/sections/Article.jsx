@@ -1,8 +1,9 @@
+import AnimatedMain from '../animations/AnimatedMain';
 import '../css/article.css';
 
 const Article = () => {
     return (
-        <article className="h-fluid flex">
+        <AnimatedMain className="h-fluid flex">
             <div className='slide_counter flex'>
                 <p id='current_slide'>1</p>
                 <p>/</p>
@@ -19,7 +20,7 @@ const Article = () => {
                 <button id='arrow_menu' className='circle'><span id="arrow" className="material-symbols-outlined circle">keyboard_arrow_up</span></button>
                 <button id='arrow_menu' className='circle'><span id="arrow" className="material-symbols-outlined circle">keyboard_arrow_down</span></button>
             </div>
-        </article>
+        </AnimatedMain>
         
     );
 };
