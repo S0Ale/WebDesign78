@@ -4,7 +4,8 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   RouterProvider,
-  Route
+  Route,
+  Outlet
 } from "react-router-dom";
 import { AnimatePresence } from 'framer-motion';
 
@@ -15,9 +16,9 @@ import Article from './sections/Article';
 const router = createBrowserRouter(
   // funzione che crea un router a partire da elementi jsx (+ leggibile)
   createRoutesFromElements(
-    <Route path="/">
+    <Route path="/" element={<App><Outlet/></App>}>
       <Route index element={<Home />} />
-      <Route path="article" element={<Article />} />
+      <Route path="/article" element={<Article />} />
     </Route>
   ),
   // il nostro url e' il nome della repo (github pages),  in questo modo
@@ -27,9 +28,7 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App>
-      <AnimatePresence><RouterProvider router={router}/></AnimatePresence>
-    </App>
+    <AnimatePresence><RouterProvider router={router}/></AnimatePresence>
   </React.StrictMode>,
 )
 
