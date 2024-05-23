@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import data from '../data/article-text.json';
+import AnimatedMain from '../animations/AnimatedMain';
 import '../css/article.css';
 
 const Article = () => {
@@ -33,7 +34,7 @@ const Article = () => {
       };
 
     return (
-        <article className="h-fluid flex">
+        <AnimatedMain className="h-fluid flex main-art">
             <div className='slide_counter flex'>
                 <p id='current_slide'>{id+1}</p>
                 <p>/</p>
@@ -51,7 +52,7 @@ const Article = () => {
                 <button id='arrow_menu' className='circle' onClick={increment}><span id="arrow" className="material-symbols-outlined circle">keyboard_arrow_up</span></button>
                 <button id='arrow_menu' className='circle' onClick={decrement}><span id="arrow" className="material-symbols-outlined circle">keyboard_arrow_down</span></button>
             </div>
-        </article>
+        </AnimatedMain>
         
     );
 };

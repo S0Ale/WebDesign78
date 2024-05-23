@@ -1,11 +1,4 @@
-/* body{
-    background-image: url(Images/background.jpeg);
-    background-size: cover;
-    background-position: no-repeat;
-    background-attachment: fixed;
-} */
-
-article{
+.main-art{
     margin: 0 10vw;
     align-items: center;
     justify-content: space-between;
