@@ -3,7 +3,7 @@ import '../css/article.css';
 
 const Article = () => {
     return (
-        <AnimatedMain className="h-fluid flex">
+        <AnimatedMain className="h-fluid flex main-art">
             <div className='slide_counter flex'>
                 <p id='current_slide'>1</p>
                 <p>/</p>

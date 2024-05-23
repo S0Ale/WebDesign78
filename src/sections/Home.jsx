@@ -4,7 +4,7 @@ import '../css/home.css';
 
 const Home = () => {
     return (
-        <AnimatedMain className="h-fluid flex column">
+        <AnimatedMain className="h-fluid flex column main-home">
             <div className="title">
                 <h1>Nome del Progetto</h1>
             </div>
