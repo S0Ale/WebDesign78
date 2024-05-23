@@ -3,7 +3,7 @@ import Logo from '../assets/logo_prova.png';
 
 const Navbar = () => {
     return (
-        <nav className="col-12 flex row">
+        <nav className="col-12 flex row layer1">
             <div className="logo">
                 <img src={Logo} alt=""/>
             </div>

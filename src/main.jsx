@@ -12,13 +12,15 @@ import { AnimatePresence } from 'framer-motion';
 import App from './App';
 import Home from './sections/Home';
 import Article from './sections/Article';
+import ArticleGrid from './sections/ArticleGrid';
 
 const router = createBrowserRouter(
   // funzione che crea un router a partire da elementi jsx (+ leggibile)
+  // outlet serve a renderizzare i figli di un route
   createRoutesFromElements(
     <Route path="/" element={<App><Outlet/></App>}>
       <Route index element={<Home />} />
-      <Route path="/article" element={<Article />} />
+      <Route path="/article" element={<ArticleGrid />} />
     </Route>
   ),
   // il nostro url e' il nome della repo (github pages),  in questo modo

@@ -1,0 +1,25 @@
+.main-grid{
+    position: relative;
+}
+
+.main-grid{
+    overflow: hidden;
+}
+
+.constraint-area{
+    position: absolute;
+    width: calc(100% - 200px);
+    height: calc(100% - 200px);
+    top: 100px;
+    bottom: 100px;
+    left: 100px;
+    right: 100px;
+}
+
+.article-grid{
+    width: 200%;
+    height: 200%;
+    border-width: 3px;
+    background: var(--article-area-bg);
+    border: 1px solid var(--border);
+}

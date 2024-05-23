@@ -10,6 +10,7 @@
 .col-10 {width: 83.33%;}
 .col-12 {width: 100%;}
 
+.layer0{z-index: 0;}
 .layer1{z-index: 1;}
 .layer2{z-index: 2;}
 
@@ -93,7 +94,6 @@ body{
 }
 
 main{
-    padding: 20vh 0;
     height: 100%;
 }
 

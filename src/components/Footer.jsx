@@ -3,7 +3,7 @@ import { faFacebook, faInstagram, faXTwitter } from '@fortawesome/free-brands-sv
 
 const Footer = () => {
   return (
-    <footer className="col-12 flex row transparent">
+    <footer className="col-12 flex row transparent layer1">
         <span>Share:</span>
         <div className="flex row social-row">
             <a href="#" className='flex'><FontAwesomeIcon icon={faFacebook}/></a>
