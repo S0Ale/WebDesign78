@@ -19,7 +19,6 @@
 .article-grid{
     width: 200%;
     height: 200%;
-    border-width: 3px;
     background: var(--article-area-bg);
     border: 1px solid var(--border);
 }

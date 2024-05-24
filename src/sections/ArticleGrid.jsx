@@ -9,7 +9,7 @@ const ArticleGrid = () => {
     return (
         <AnimatedMain className="main-grid">
             <div className='h-fluid constraint-area' ref={constraints}>
-                <DraggableDiv className="article-grid" constraints={constraints}>
+                <DraggableDiv className="grid article-grid" constraints={constraints}>
                     <p>Content</p>
                 </DraggableDiv>
             </div>
