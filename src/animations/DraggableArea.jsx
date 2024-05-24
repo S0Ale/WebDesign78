@@ -8,6 +8,7 @@ const DraggableArea = (props) => {
             drag
             dragControls={dragControls}
             dragConstraints={props.constraints}
+            style={{ touchAction: "none" }}
         >
             {props.children}
         </motion.div>
