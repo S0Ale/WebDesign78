@@ -63,23 +63,24 @@
     border: none;
     outline: none;
     cursor: pointer;
-    background: var(--button);
-    transition: background .2s;
     color: var(--text);
-}
-
-.gen-btn:hover, .gen-btn:focus{
-    background: var(--button-hover);
-}
-
-.gen-btn:active{
-    background: var(--button-active);
+    background: var(--bgnd);
 }
 
 .front-btn{
     border-radius: 100px;
     font-weight: 550;
     padding: 10px 30px;
+    background: var(--button);
+    transition: background .2s;
+}
+
+.front-btn:hover, .front-btn:focus{
+    background: var(--button-hover);
+}
+
+.front-btn:active{
+    background: var(--button-active);
 }
 
 .circle{
@@ -107,32 +108,9 @@ a{
     text-decoration: none;
 }
 
-footer{
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    padding: 10px 20px;
-    color: var(--text);
-}
-
-footer a{
-    padding: 5px 10px;
-    margin: 0 5px;
-}
-
-footer svg{
-    height: 1.5em !important;
-    color: var(--text);
-    transition: color .2s;
-}
-footer svg:hover{
-    color: var(--text-hover);
-}
-
 /* -- Navbar -- */
 
 nav{
-    margin-top: 5px;
     position: fixed;
     height: 80px;
     align-items: center;
@@ -170,7 +148,39 @@ nav{
     transform: scaleX(1);
 }
 
+.nav-drop-btn{
+    display: none;
+    margin-right: 20px;
+    padding: 10px 15px;
+}
+
+.nav-drop-btn svg{
+    height: 1.4em;
+}
+
 /* -- Footer -- */
+
+footer{
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    padding: 10px 20px;
+    color: var(--text);
+}
+
+footer a{
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+footer svg{
+    height: 1.5em !important;
+    color: var(--text);
+    transition: color .2s;
+}
+footer svg:hover{
+    color: var(--text-hover);
+}
 
 .social-row{
     margin-left: 20px;
@@ -178,8 +188,26 @@ nav{
     width: fit-content;
 }
 
-.social-row img{
-    height: 40px;
-    border-radius: 50%;
-    margin: 0 10px;
+/* -- Media Queries -- */
+
+@media only screen and (max-width: 992px){
+    nav{
+        justify-content: space-between;
+    }
+
+    .logo img{
+        margin: 0 30px;
+    }
+
+    .links{
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: -100%;
+        flex-direction: column;
+    }
+
+    .nav-drop-btn{
+        display: block;
+    }
 }

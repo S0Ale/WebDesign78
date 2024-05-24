@@ -1,4 +1,8 @@
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
+import GenButton from './GenButton';
 import Logo from '../assets/logo_prova.png';
 
 const Navbar = () => {
@@ -12,6 +16,10 @@ const Navbar = () => {
                 <a href="" className="nav-link">Indice articoli</a>
                 <a href="" className="nav-link">About</a>
             </div>
+            <GenButton className="nav-drop-btn">
+                <FontAwesomeIcon icon={faBars}/>
+            </GenButton>
+
         </nav>
     );
 };
