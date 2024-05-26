@@ -17,8 +17,43 @@
 }
 
 .article-grid{
-    width: 200%;
-    height: 200%;
+    width: fit-content;
     background: var(--article-area-bg);
     border: 1px solid var(--border);
+
+    --element-dim: 600px;
+
+    grid-template-columns: repeat(6, var(--element-dim));
+    grid-template-rows: repeat(3, var(--element-dim));
+}
+
+.grid-el{
+    position: relative;
+}
+
+/* -- Articles -- */
+
+.article{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+}
+
+#art1{
+    bottom: 50px;
+    right: 50px;
+}
+
+#art2{
+    width: 350px;
+    height: 250px;
+    top: 100px;
+    right: 50px;
+}
+
+#art3{
+    width: 250px;
+    height: 350px;
+    bottom: 50px;
+    left: 200px;
 }
