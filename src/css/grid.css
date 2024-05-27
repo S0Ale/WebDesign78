@@ -35,8 +35,28 @@
 
 .article{
     position: absolute;
-    width: 300px;
-    height: 300px;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.article h2{
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    font-size: .95em;
+    line-height: 2.5rem;
+}
+
+.highlight1, .highlight2{
+    letter-spacing: .5rem;
+}
+
+.highlight1{
+    font-size: 4rem;
+}
+.highlight2{
+    font-size: 2.5rem;
 }
 
 #art1{
@@ -45,15 +65,13 @@
 }
 
 #art2{
-    width: 350px;
-    height: 250px;
-    top: 100px;
+    top: 80px;
     right: 50px;
+    padding: 60px 50px;
 }
 
 #art3{
-    width: 250px;
-    height: 350px;
     bottom: 50px;
     left: 200px;
+    padding: 70px 50px;
 }
