@@ -19,8 +19,9 @@ const router = createBrowserRouter(
   // outlet serve a renderizzare i figli di un route
   createRoutesFromElements(
     <Route path="/" element={<App><Outlet/></App>}>
-      <Route index element={<Home />} />
-      <Route path="/article" element={<ArticleGrid />} />
+      <Route exact path="/"index element={<Home />} />
+      <Route path="/article" index element={<Article />} />
+      <Route path="/articleGrid" element={<ArticleGrid />} />
     </Route>
   ),
   // il nostro url e' il nome della repo (github pages),  in questo modo

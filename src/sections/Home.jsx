@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import React from 'react';
 import AnimatedMain from '../animations/AnimatedMain';
 import '../css/home.css';
 
@@ -12,7 +13,7 @@ const Home = () => {
                 <p>Breve descrizione dell'intento del progetto</p>
             </div>
             <div className="start">
-                <Link to="article" className="gen-btn front-btn">Start</Link>
+                <Link to="articleGrid" className="gen-btn front-btn">Start</Link>
             </div>
         </AnimatedMain>
     );

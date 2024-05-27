@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import React from 'react';
 import data from '../data/article-text.json';
 import AnimatedMain from '../animations/AnimatedMain';
 import '../css/article.css';
@@ -6,9 +8,12 @@ import '../css/article.css';
 const Article = () => {
     const minCount = 0;
     const maxCount = 4;
-    const [id, setCount] = useState(minCount);
+    const location = useLocation();
+    const { def } = location.state || { def: minCount };
+    const [id, setCount] = useState(def);
     const [content, setContent] = useState('');
     const [classe, setClasse] = useState('article_textbox');
+
     
     const increment = () => {
         setCount(prevCount => {

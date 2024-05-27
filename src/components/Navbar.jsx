@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -13,7 +14,7 @@ const Navbar = () => {
             </div>
             <div className="h-fluid flex row links">
                 <Link to="/" className='nav-link'>Home</Link>
-                <a href="" className="nav-link">Indice articoli</a>
+                <Link to="article" className="nav-link">Indice articoli</Link>
                 <a href="" className="nav-link">About</a>
             </div>
             <GenButton className="nav-drop-btn">
