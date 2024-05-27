@@ -13,6 +13,7 @@ import App from './App';
 import Home from './sections/Home';
 import Article from './sections/Article';
 import ArticleGrid from './sections/ArticleGrid';
+import About from "./sections/About";
 
 const router = createBrowserRouter(
   // funzione che crea un router a partire da elementi jsx (+ leggibile)
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
       <Route exact path="/"index element={<Home />} />
       <Route path="/article" index element={<Article />} />
       <Route path="/articleGrid" element={<ArticleGrid />} />
+      <Route path="/about" element={<About />} />
     </Route>
   ),
   // il nostro url e' il nome della repo (github pages),  in questo modo

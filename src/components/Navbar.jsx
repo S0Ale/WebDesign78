@@ -15,7 +15,7 @@ const Navbar = () => {
             <div className="h-fluid flex row links">
                 <Link to="/" className='nav-link'>Home</Link>
                 <Link to="article" className="nav-link">Indice articoli</Link>
-                <a href="" className="nav-link">About</a>
+                <Link to="about" className="nav-link">About</Link>
             </div>
             <GenButton className="nav-drop-btn">
                 <FontAwesomeIcon icon={faBars}/>
