@@ -36,8 +36,7 @@
 .article{
     position: absolute;
     padding: 50px;
-    align-items: center;
-    justify-content: center;
+    text-align: justify;
 }
 
 .article h2{
