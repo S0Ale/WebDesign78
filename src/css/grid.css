@@ -1,8 +1,5 @@
 .main-grid{
     position: relative;
-}
-
-.main-grid{
     overflow: hidden;
 }
 
@@ -44,19 +41,35 @@
     display: block;
     width: fit-content;
     height: fit-content;
-    font-size: .95em;
-    line-height: 2.5rem;
 }
+.row-reverse{
+    flex-direction: row-reverse !important;
+}
+
+.line{
+    display: flex;
+    flex-direction: row;
+    min-height: fit-content;
+}
+
+.line span{
+    line-height: 100%;
+}
+
+.up{align-items: start;}
+.down{align-items: end;}
+.left{justify-content: start;}
+.right{justify-content: end;}
 
 .highlight1, .highlight2{
     letter-spacing: .5rem;
 }
 
 .highlight1{
-    font-size: 4rem;
+    font-size: 4em;
 }
 .highlight2{
-    font-size: 2.5rem;
+    font-size: 2.5em;
 }
 
 #art-0{
@@ -68,6 +81,7 @@
     top: 80px;
     right: 50px;
     padding: 60px 50px;
+    font-size: .6rem;
 }
 
 #art-2{
