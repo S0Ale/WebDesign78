@@ -37,6 +37,7 @@
     position: absolute;
     padding: 50px;
     text-align: justify;
+    cursor: pointer;
 }
 
 .article h2{
