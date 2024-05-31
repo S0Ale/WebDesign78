@@ -13,8 +13,8 @@ const ArticleCard = (props) => {
 
     return (
         <button onClick={handleClick}>
-            <div className='article debug2' id={idName}>
-                <h2 className="debug1">{props.children}</h2>
+            <div className='article' id={idName}>
+                <h2 className="">{props.children}</h2>
             </div>
         </button>
     );
