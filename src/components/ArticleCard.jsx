@@ -12,10 +12,8 @@ const ArticleCard = (props) => {
     const idName = "art-" + props.id;
 
     return (
-        <button onClick={handleClick}>
-            <div className='article' id={idName}>
-                <h2 className="">{props.children}</h2>
-            </div>
+        <button className="article" id={idName} onClick={handleClick}>
+            <h2 className="">{props.children}</h2>
         </button>
     );
 }

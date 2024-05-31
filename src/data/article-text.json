@@ -1,30 +1,30 @@
 {
     "articles": [
-      {
-        "title": "Il Futuro della Tecnologia",
-        "subtitle": "Come l'Intelligenza Artificiale sta cambiando il mondo",
-        "content": "L'Intelligenza Artificiale (IA) sta rivoluzionando molti settori, dalla sanità alla finanza, migliorando l'efficienza e aprendo nuove opportunità. In questo articolo esploreremo le ultime innovazioni e il loro impatto sulla nostra vita quotidiana."
-      },
-      {
-        "title": "Sostenibilità Ambientale",
-        "subtitle": "Strategie per un pianeta più verde",
-        "content": "La sostenibilità ambientale è diventata una priorità globale. Questo articolo discute diverse strategie per ridurre l'impronta ecologica, come l'energia rinnovabile, il riciclaggio e la riduzione dei rifiuti."
-      },
-      {
-        "title": "Viaggi e Avventure",
-        "subtitle": "Destinazioni imperdibili per il 2024",
-        "content": "Esplorare nuovi luoghi è una delle esperienze più arricchenti. Scopri le destinazioni più affascinanti da visitare nel 2024, dalle spiagge tropicali alle città storiche."
-      },
-      {
-        "title": "Prova",
-        "subtitle": "prova",
-        "content": "prova"
-      },
-      {
-        "title": "Super prova",
-        "subtitle": "super prova",
-        "content": "super prova"
-      }
+        {
+            "title": "Quella irresistibile voglia di Muri",
+            "subtitle": "Sottotitolo",
+            "content": "Contenuto"
+        },
+        {
+            "title": "Tanto i Muri sono solo in America",
+            "subtitle": "Sottotitolo",
+            "content": "Contenuto"
+        },
+        {
+            "title": "Perchè i Muri sono solo quelli delle case",
+            "subtitle": "Sottotitolo",
+            "content": "Contenuto"
+        },
+        {
+            "title": "Prova",
+            "subtitle": "Sottotitolo",
+            "content": "Contenuto"
+        },
+        {
+            "title": "Super prova",
+            "subtitle": "Sottotitolo",
+            "content": "Contenuto"
+        }
     ]
 }
   
