@@ -13,7 +13,7 @@ const ArticleCard = (props) => {
 
     return (
         <button className="article" id={idName} onClick={handleClick}>
-            <h2 className="">{props.children}</h2>
+            {props.children}
         </button>
     );
 }

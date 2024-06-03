@@ -1,40 +1,30 @@
+body{
+    background-image: url('../assets/sfondo_low.png');
+    background-size: contain;
+}
+
 .main-art{
-    margin: 0 10vw;
     align-items: center;
     justify-content: space-between;
 }
 
 .article_textbox{
     width: 650px;
-    height: 400px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    height: 70%;
     padding: 10px; 
-    background-color: hsl(0, 0%, 65%);
 }
 
-.article_textbox h1{
-    font-size: 3.5em;
-    font-weight: bold;
-    margin: 15px 30px;
+.article_textbox .article{
+    width: 400px;
 }
 
-.article_textbox h2{
-    font-size: 1.5em;
-    margin: 0px 30px;
-}
-
-.article_textbox p{
-    font-size: 1.2em;
-    margin: 0px 30px;
-    height: 100%;
+.article_textbox_expand .article{
+    display: none;
 }
 
 .article_textbox_expand{
     width: 650px;
-    height: 550px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    height: 70%;
     padding: 10px; 
     background-color: hsl(0, 0%, 65%);
 }
@@ -58,28 +48,22 @@
 
 .read_more{
     position: absolute;
-    background-color: hsl(0, 0%, 75%);
     height: 100px;
     width: 100px;
-    font-weight: 600;
-    font-size: 1.5em;
     right: 20%;
     bottom: 260px;
-    transition: background-color 0.25s ease;
 }
 
 .read_more:hover{
-    background-color: hsl(0, 0%, 85%);
     cursor: pointer;
-}
-
-.read_more:active{
-    background-color: hsl(0, 0%, 92%);
-    border: none;
+    opacity: 0.8;
 }
 
 .slide_counter{
-    font-size: 4.5em;
+    background-image: url('../assets/cartafondo.png');
+    background-size: cover;
+    padding: 15px;
+    font-size: 3.5em;
     font-weight: bold;
 }
 
@@ -92,7 +76,7 @@
 }
 
 #arrow_menu{
-    background-color: hsl(0, 0%, 70%);
+    background-color: whitesmoke;
     height: 60px;
     width: 60px;
     margin: 10px 0;

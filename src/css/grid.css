@@ -1,10 +1,12 @@
 .main-grid{
     position: relative;
     overflow: hidden;
-    /*background-image: url("../assets/sfondo.png");*/
+    background-image: url("../assets/sfondo_low.png");
+    background-size: contain;
 }
 
 .constraint-area{
+    background-color: transparent;
     position: absolute;
     width: calc(100% - 200px);
     height: calc(100% - 160px);
@@ -15,17 +17,19 @@
 }
 
 .article-grid{
+    
     width: fit-content;
     background: var(--article-area-bg);
-    border: 1px solid var(--border);
 
     --element-dim: 600px;
 
-    grid-template-columns: repeat(6, var(--element-dim));
+    grid-template-columns: repeat(5, var(--element-dim));
     grid-template-rows: repeat(3, var(--element-dim));
+    background-color: rgba(255, 255, 255, 0.115);
 }
 
 .grid-el{
+    
     position: relative;
 }
 
@@ -33,14 +37,21 @@
 
 .article{
     position: absolute;
-    padding: 50px;
+    padding: 2px;
+    margin: 70px;
     text-align: justify;
     background: var(--article-bg);
     cursor: pointer;
     transition: .2s;
+    background-color: transparent;
 }
 .article:hover{
     transform: scale(1.05);
+}
+
+.art-image{
+    width: 100%;
+    height: 100%;
 }
 
 .article h2{
@@ -76,22 +87,4 @@
 }
 .highlight2{
     font-size: 2.5em;
-}
-
-#art-0{
-    bottom: 50px;
-    right: 30px;
-}
-
-#art-1{
-    top: 80px;
-    right: 50px;
-    padding: 60px 50px;
-    font-size: .6rem;
-}
-
-#art-2{
-    bottom: 50px;
-    left: 200px;
-    padding: 70px 50px;
 }
