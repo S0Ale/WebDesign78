@@ -14,7 +14,7 @@
 .col-9 {width: 75%;}
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+.col-12 {width: 100%; background-color: rgb(233, 233, 233);}
 
 .layer0{z-index: 0;}
 .layer1{z-index: 1;}

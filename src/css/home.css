@@ -4,31 +4,48 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+
 .main-home{
-    align-items: center;
-    justify-content: center;
-    padding: 20vh 0;
+    background-image: url('../assets/sfondo_low.png');
+    background-size: contain;
+    padding: 15px;
 }
 
-.main-home h1{
-    font-size: 5em;
-}
-
-.main-home p{
-    font-size: 2em;
-}
-
-.main-home *{
-    margin: 10px 0;
+.container{
+    background-color: whitesmoke;
+    width: 55%;
+    height: fit-content;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .description{
-    width: 25%;
+    margin: auto;
+    width: 80%;
+    font-size: 28px;
+    padding: 20px;
     text-align: center;
 }
 
 .start{
-    font-size: 28px;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}
+
+.gen-btn{
+    font-size: 30px;
+    border-radius: 0%;
+    margin: auto;
+    color: whitesmoke;
+    background-color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .share{
@@ -40,6 +57,7 @@
     flex-direction: row;
 }
 
+
 .footer ul{
     list-style: none;
     display: flex;
@@ -47,21 +65,4 @@
 
 .footer ul li{
     margin: 0 10px;
-
 }
-
-/* #ciao{
-    background-image: url("orso1.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: 1s ease;
-}
-
-#ciao:hover{
-    background-image: url("orso2.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: 1s ease;
-} */

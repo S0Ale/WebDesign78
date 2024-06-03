@@ -1,6 +1,7 @@
 .main-grid{
     position: relative;
     overflow: hidden;
+    /*background-image: url("../assets/sfondo.png");*/
 }
 
 .constraint-area{

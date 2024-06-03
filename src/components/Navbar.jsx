@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import GenButton from './GenButton';
-import Logo from '../assets/logo_prova.png';
+import Logo from '../assets/logo.png';
 
 const Navbar = () => {
     return (
