@@ -112,9 +112,13 @@ button{
 
 nav{
     position: fixed;
-    padding: 0 35px;
-    height: 80px;
+    padding: 20px 35px;
+}
+
+.nav-wrapper{
     align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--text);
 }
 
 .logo{
@@ -122,7 +126,7 @@ nav{
 }
 
 .logo img{
-    height: 40px;
+    height: 35px;
 }
 
 .links{
@@ -136,22 +140,10 @@ nav{
     color: inherit;
     font-family: var(--sub-family);
     font-weight: 500;
+    transition: color .2s;
 }
-.nav-link::after{
-    position: absolute;
-    content: '';
-    display: block;
-    height: 2px;
-    bottom: 8px;
-    left: 25px;
-    right: 25px;
-    transform: scaleX(0);
-    transform-origin: left;
-    background: var(--text);
-    transition: transform .2s;
-}
-.nav-link:hover::after{
-    transform: scaleX(1);
+.nav-link:hover{
+    color: var(--text-hover);
 }
 
 .nav-drop-btn{

@@ -9,18 +9,19 @@ import Logo from '../assets/logo.png';
 const Navbar = () => {
     return (
         <nav className="col-12 flex row layer1">
-            <div className="logo">
-                <img src={Logo} alt=""/>
+            <div className="col-12 flex row nav-wrapper">
+                <div className="logo">
+                    <img src={Logo} alt=""/>
+                </div>
+                <div className="h-fluid flex row links">
+                    <Link to="/" className='nav-link'>HOME</Link>
+                    <Link to="article" className="nav-link">INDICE ARTICOLI</Link>
+                    <Link to="about" className="nav-link">ABOUT</Link>
+                </div>
+                <GenButton className="nav-drop-btn">
+                    <FontAwesomeIcon icon={faBars}/>
+                </GenButton>
             </div>
-            <div className="h-fluid flex row links">
-                <Link to="/" className='nav-link'>HOME</Link>
-                <Link to="article" className="nav-link">INDICE ARTICOLI</Link>
-                <Link to="about" className="nav-link">ABOUT</Link>
-            </div>
-            <GenButton className="nav-drop-btn">
-                <FontAwesomeIcon icon={faBars}/>
-            </GenButton>
-
         </nav>
     );
 };
