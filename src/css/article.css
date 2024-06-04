@@ -1,0 +1,107 @@
+body{
+    background-image: url('../assets/sfondo_low.png');
+    background-size: contain;
+}
+
+.main-art{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.article_textbox{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 70%;
+    padding: 5px; 
+}
+
+.article_textbox .article{
+    max-height: 400px;
+}
+
+.article_textbox_expand .article{
+    display: none;
+}
+
+.article_textbox_expand{
+    position: relative;
+    width: 650px;
+    height: 70%;
+    padding: 10px; 
+    background-color: hsl(0, 0%, 65%);
+}
+
+.article_textbox_expand h1{
+    font-size: 3em;
+    font-weight: bold;
+    margin: 15px 30px;
+}
+
+.article_textbox_expand h2{
+    font-size: 1.3em;
+    margin: 0px 30px;
+}
+
+.article_textbox_expand p{
+    font-size: 1.2em;
+    margin: 0px 30px;
+    height: 100%;
+}
+
+.read_more{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    right: 10px;
+    bottom: 10px;
+}
+
+.read_more:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.slide_counter{
+    background-image: url('../assets/cartafondo.png');
+    background-size: cover;
+    width: 180px;
+    padding: 15px;
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+.slide_counter #current_slide {
+    transform: translateY(-20px);
+}
+
+#total_slide {
+    transform: translateY(20px);
+}
+
+#arrow_menu{
+    background-color: whitesmoke;
+    height: 60px;
+    width: 60px;
+    margin: 10px 0;
+    transition: background-color 0.25s ease;
+}
+
+#arrow{
+    color:black;
+    font-size: 4.5em;
+    font-weight: bold;
+}
+
+#arrow_menu:hover{
+    background-color: hsl(0, 0%, 80%);
+    cursor: pointer;
+}
+
+#arrow_menu:active{
+    background-color: hsl(0, 0%, 85%);
+    border: none;
+}
+

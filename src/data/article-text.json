@@ -1,0 +1,30 @@
+{
+    "articles": [
+        {
+            "title": "Quella irresistibile voglia di Muri",
+            "subtitle": "Sottotitolo",
+            "content": "Contenuto"
+        },
+        {
+            "title": "Tanto i Muri sono solo in America",
+            "subtitle": "Sottotitolo",
+            "content": "Contenuto"
+        },
+        {
+            "title": "Perchè i Muri sono solo quelli delle case",
+            "subtitle": "Sottotitolo",
+            "content": "Contenuto"
+        },
+        {
+            "title": "Prova",
+            "subtitle": "Sottotitolo",
+            "content": "Contenuto"
+        },
+        {
+            "title": "Super prova",
+            "subtitle": "Sottotitolo",
+            "content": "Contenuto"
+        }
+    ]
+}
+  

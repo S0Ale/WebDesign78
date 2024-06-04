@@ -1,13 +1,22 @@
+/*Stili applicati ad ogni pagina*/
+
 @import url(variables.css);
 @import url(reset.css);
 
 .col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
 .col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
 .col-8 {width: 66.66%;}
 .col-9 {width: 75%;}
 .col-10 {width: 83.33%;}
-.col-12 {width: 100%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%; background-color: rgb(233, 233, 233);}
 
+.layer0{z-index: 0;}
 .layer1{z-index: 1;}
 .layer2{z-index: 2;}
 
@@ -17,7 +26,11 @@
 .debug4{border: 1px solid aqua;}
 
 :root{
-    font-family: var(--family);
+    font-family: var(--text-family);
+}
+
+h1, h2, h3{
+    font-family: var(--sub-family);
 }
 
 /* -- Generics -- */
@@ -54,22 +67,21 @@
     border: none;
     outline: none;
     cursor: pointer;
-    background: var(--button);
-    transition: background .2s;
+    color: var(--text);
+    background: var(--bgnd);
 }
 
-.gen-btn:hover, .gen-btn:focus{
+.front-btn:hover, .front-btn:focus{
     background: var(--button-hover);
 }
 
-.gen-btn:active{
+.front-btn:active{
     background: var(--button-active);
 }
 
-.front-btn{
-    border-radius: 100px;
-    font-weight: 550;
-    padding: 10px 30px;
+.circle{
+    border-radius: 50%;
+    border: none;
 }
 
 /* -- Elements -- */
@@ -80,38 +92,41 @@
 }
 
 body{
-    background: var(--bgnd);
+    background: url('./assets/sfondo_low.png') no-repeat cover;
     color: var(--text);
 }
 
 main{
-    padding: 20vh 0;
-    height: calc(100% - 80px);
+    height: 100%;
 }
 
 a{
     text-decoration: none;
 }
 
-footer{
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    padding: 10px 20px;
-    color: var(--text);
+button{
+    border: none;
 }
 
 /* -- Navbar -- */
 
 nav{
     position: fixed;
-    height: 80px;
+    padding: 20px 35px;
+}
+
+.nav-wrapper{
     align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--text);
 }
 
 .logo{
-    padding: 0 25px;
-    margin-right: 100px;
+    margin-right: 40px;
+}
+
+.logo img{
+    height: 35px;
 }
 
 .links{
@@ -121,34 +136,76 @@ nav{
 .nav-link{
     position: relative;
     margin: 0 10px;
-    padding: 0 20px;
+    padding: 10px 25px;
     color: inherit;
+    font-family: var(--sub-family);
+    font-weight: 500;
+    transition: color .2s;
 }
-.nav-link::after{
-    position: absolute;
-    content: '';
-    display: block;
-    height: 2px;
-    bottom: -2px;
-    left: 20px;
-    right: 20px;
-    transform: scaleX(0);
-    transform-origin: left;
-    background: var(--text);
-    transition: transform .2s;
+.nav-link:hover{
+    color: var(--text-hover);
 }
-.nav-link:hover::after{
-    transform: scaleX(1);
+
+.nav-drop-btn{
+    display: none;
+    margin-right: 20px;
+    padding: 10px 15px;
+    background: transparent;
+}
+
+.nav-drop-btn svg{
+    height: 1.4em;
 }
 
 /* -- Footer -- */
+
+footer{
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    padding: 10px 20px;
+    color: var(--text);
+}
+
+footer a{
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+footer svg{
+    height: 1.5em !important;
+    color: var(--text);
+    transition: color .2s;
+}
+footer svg:hover{
+    color: var(--text-hover);
+}
 
 .social-row{
     margin-left: 20px;
     width: fit-content;
 }
 
-.social-row a{
-    margin: 0 10px;
-    padding: 10px;
+/* -- Media Queries -- */
+
+@media only screen and (max-width: 992px){
+    nav{
+        justify-content: space-between;
+    }
+
+    .logo img{
+        margin: 0 30px;
+    }
+
+    .links{
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: -100%;
+        flex-direction: column;
+    }
+
+    .nav-drop-btn{
+        display: block;
+    }
 }

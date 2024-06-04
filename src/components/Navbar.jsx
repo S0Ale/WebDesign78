@@ -1,13 +1,26 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
+import GenButton from './GenButton';
+import Logo from '../assets/logo.png';
+
 const Navbar = () => {
     return (
-        <nav className="col-12 flex row">
-            <div className="logo">
-                <img src="logo.png" alt="LOGO"/>
-            </div>
-            <div className="h-fluid flex row links">
-                <a href="" className="nav-link">Home</a>
-                <a href="" className="nav-link">Indice articoli</a>
-                <a href="" className="nav-link">About</a>
+        <nav className="col-12 flex row layer1">
+            <div className="col-12 flex row nav-wrapper">
+                <div className="logo">
+                    <img src={Logo} alt=""/>
+                </div>
+                <div className="h-fluid flex row links">
+                    <Link to="/" className='nav-link'>HOME</Link>
+                    <Link to="article" className="nav-link">INDICE ARTICOLI</Link>
+                    <Link to="about" className="nav-link">ABOUT</Link>
+                </div>
+                <GenButton className="nav-drop-btn">
+                    <FontAwesomeIcon icon={faBars}/>
+                </GenButton>
             </div>
         </nav>
     );

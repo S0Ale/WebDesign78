@@ -1,38 +1,49 @@
+/*Stile per Home.jsx*/
+
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif, 'Montserrat', 'DM Serif Display', serif;
+
+.main-home{
+    padding: 15px;
 }
 
-main{
-    align-items: center;
-    justify-content: center;
-}
-
-main h1{
-    font-size: 5em;
-}
-
-main p{
-    font-size: 2em;
-}
-
-main *{
-    margin: 10px 0;
+.container{
+    background-color: whitesmoke;
+    width: 55%;
+    height: fit-content;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .description{
-    width: 25%;
+    margin: auto;
+    width: 80%;
+    font-size: 28px;
+    padding: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.start{
+    width: 30%;
+    margin: auto;
     text-align: center;
 }
 
-#start{
-    padding: 12px 30px;
+.front-btn{
+    font-size: 30px;
+    font-weight: 900;
+    font-family: var(--title-family);
+    border-radius: 0%;
+    margin: auto;
+    color: whitesmoke;
+    background-color: black;
+    padding: 5px 50px;
 }
 
 .share{
@@ -44,6 +55,7 @@ main *{
     flex-direction: row;
 }
 
+
 .footer ul{
     list-style: none;
     display: flex;
@@ -51,21 +63,4 @@ main *{
 
 .footer ul li{
     margin: 0 10px;
-
 }
-
-/* #ciao{
-    background-image: url("orso1.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: 1s ease;
-}
-
-#ciao:hover{
-    background-image: url("orso2.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: 1s ease;
-} */
