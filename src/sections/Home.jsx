@@ -9,7 +9,7 @@ const Home = () => {
         <AnimatedMain className="h-fluid flex column main-home">
             <div className='container'>
                 <div className="title">
-                    <img src={logo} width='100%' height='100px'/>
+                    <img src={logo} width='100%'/>
                 </div>
                 <div className="description">
                     Tieniti aggiornato su tutte le notizie Europee e sii sempre pronto a difendere il Tuo Paese!

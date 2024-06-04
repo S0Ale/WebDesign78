@@ -6,8 +6,6 @@
 
 
 .main-home{
-    background-image: url('../assets/sfondo_low.png');
-    background-size: contain;
     padding: 15px;
 }
 
@@ -23,12 +21,12 @@
 }
 
 .description{
-    font-family: 'inter';
     margin: auto;
     width: 80%;
     font-size: 28px;
     padding: 20px;
     text-align: center;
+    font-weight: 700;
 }
 
 .start{
@@ -37,16 +35,15 @@
     text-align: center;
 }
 
-.gen-btn{
+.front-btn{
     font-size: 30px;
+    font-weight: 900;
+    font-family: var(--title-family);
     border-radius: 0%;
     margin: auto;
     color: whitesmoke;
     background-color: black;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 5px 50px;
 }
 
 .share{

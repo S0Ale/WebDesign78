@@ -1,8 +1,6 @@
 .main-grid{
     position: relative;
     overflow: hidden;
-    background-image: url("../assets/sfondo_low.png");
-    background-size: contain;
 }
 
 .constraint-area{

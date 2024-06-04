@@ -26,7 +26,11 @@
 .debug4{border: 1px solid aqua;}
 
 :root{
-    font-family: var(--family);
+    font-family: var(--text-family);
+}
+
+h1, h2, h3{
+    font-family: var(--sub-family);
 }
 
 /* -- Generics -- */
@@ -67,14 +71,6 @@
     background: var(--bgnd);
 }
 
-.front-btn{
-    border-radius: 100px;
-    font-weight: 550;
-    padding: 10px 30px;
-    background: var(--button);
-    transition: background .2s;
-}
-
 .front-btn:hover, .front-btn:focus{
     background: var(--button-hover);
 }
@@ -96,7 +92,7 @@
 }
 
 body{
-    background: var(--bgnd);
+    background: url('./assets/sfondo_low.png') no-repeat cover;
     color: var(--text);
 }
 
@@ -116,13 +112,17 @@ button{
 
 nav{
     position: fixed;
+    padding: 0 35px;
     height: 80px;
     align-items: center;
 }
 
+.logo{
+    margin-right: 40px;
+}
+
 .logo img{
-    height: 50px;
-    margin: 0 50px;
+    height: 40px;
 }
 
 .links{
@@ -134,13 +134,15 @@ nav{
     margin: 0 10px;
     padding: 10px 25px;
     color: inherit;
+    font-family: var(--sub-family);
+    font-weight: 500;
 }
 .nav-link::after{
     position: absolute;
     content: '';
     display: block;
     height: 2px;
-    bottom: 10px;
+    bottom: 8px;
     left: 25px;
     right: 25px;
     transform: scaleX(0);
@@ -156,6 +158,7 @@ nav{
     display: none;
     margin-right: 20px;
     padding: 10px 15px;
+    background: transparent;
 }
 
 .nav-drop-btn svg{
