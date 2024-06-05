@@ -26,7 +26,8 @@
     font-size: 28px;
     padding: 20px;
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
+    font-family: var(--text-family);
 }
 
 .start{
