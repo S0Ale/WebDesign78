@@ -21,7 +21,7 @@ const ArticleGrid = () => {
                                 <div className="line down"><span className="highlight1">MURO</span> e passa la</div>
                                 <div className="line right"><span className="highlight1">PAURA</span></div>
                             </ArticleCard>
-                            <div className='grid-el '></div>
+                            <ArticleCard></ArticleCard>
                             <ArticleCard className='big blue'>
                                 <div className="line">Ma perchè non un</div>
                                 <div className="line"><span className="highlight1">MURO</span></div>

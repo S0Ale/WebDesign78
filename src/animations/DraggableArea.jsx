@@ -1,4 +1,5 @@
 import { motion, useDragControls } from "framer-motion";
+import { query } from "../scripts/utils";
 
 const DraggableArea = (props) => {
     const dragControls = useDragControls();
@@ -9,6 +10,18 @@ const DraggableArea = (props) => {
             dragControls={dragControls}
             dragConstraints={props.constraints}
             style={{ touchAction: "none" }}
+
+            onDragStart={() => {
+                query('.article').forEach(element => {
+                    element.style.pointerEvents = "none"; 
+                });
+                
+            }}
+            onDragEnd={() => {
+                query('.article').forEach(element => {
+                    element.style.pointerEvents = "auto"; 
+                });
+            }}
         >
             {props.children}
         </motion.div>
