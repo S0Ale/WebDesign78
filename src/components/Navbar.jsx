@@ -14,9 +14,9 @@ const Navbar = () => {
                     <img src={Logo} alt=""/>
                 </div>
                 <div className="h-fluid flex row links">
-                    <Link to="/" className='nav-link'>HOME</Link>
-                    <Link to="article" className="nav-link">INDICE ARTICOLI</Link>
-                    <Link to="about" className="nav-link">ABOUT</Link>
+                    <Link to="/" className='nav-link'>Home</Link>
+                    <Link to="article" className="nav-link">Indice articoli</Link>
+                    <Link to="about" className="nav-link">About</Link>
                 </div>
                 <GenButton className="nav-drop-btn">
                     <FontAwesomeIcon icon={faBars}/>

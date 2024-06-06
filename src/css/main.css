@@ -138,7 +138,7 @@ nav{
     margin: 0 10px;
     padding: 10px 25px;
     color: inherit;
-    font-family: var(--sub-family);
+    font-family: var(--text-family);
     font-weight: 500;
     transition: color .2s;
 }
