@@ -11,43 +11,47 @@ const ArticleGrid = () => {
     return (
         <AnimatedMain className="main-grid">
             <div className='h-fluid constraint-area debug2' ref={constraints}>
-                <DraggableDiv className="grid article-grid" constraints={constraints}>
-                    <GridModule>
-                        <div className='grid-el debug1'></div>
-                        <div className='grid-el debug1'></div>
-                        <div className='grid-el debug1'></div>
-                        <div className='grid-el debug1'></div>
-                    </GridModule>
-                    <GridModule className="grid-reverse">
-                        <div className='grid-el debug1'></div>
-                        <div className='grid-el debug1'></div>
-                        <div className='grid-el debug1'></div>
-                        <div className='grid-el debug1'></div>
-                    </GridModule>
-                    <GridModule className="grid-reverse">
-                        <div className='grid-el debug1'></div>
-                        <div className='grid-el debug1'></div>
-                        <div className='grid-el debug1'></div>
-                        <div className='grid-el debug1'></div>
-                    </GridModule>
-                    <GridModule>
-                        <div className='grid-el debug1'></div>
-                        <div className='grid-el debug1'></div>
-                        <div className='grid-el debug1'></div>
-                        <div className='grid-el debug1'></div>
-                    </GridModule>
-                    <GridModule>
-                        <div className='grid-el debug1'></div>
-                        <div className='grid-el debug1'></div>
-                        <div className='grid-el debug1'></div>
-                        <div className='grid-el debug1'></div>
-                    </GridModule>
-                    <GridModule className="grid-reverse">
-                        <div className='grid-el debug1'></div>
-                        <div className='grid-el debug1'></div>
-                        <div className='grid-el debug1'></div>
-                        <div className='grid-el debug1'></div>
-                    </GridModule>
+                <DraggableDiv className="flex row article-grid" constraints={constraints}>
+                    <div className="grid-column">
+                        <GridModule>
+                            <div className='grid-el '></div>
+                            <div className='grid-el '></div>
+                            <div className='grid-el '></div>
+                            <div className='grid-el '></div>
+                        </GridModule>
+                        <GridModule className="grid-reverse">
+                            <div className='grid-el '></div>
+                            <div className='grid-el '></div>
+                            <div className='grid-el '></div>
+                            <div className='grid-el '></div>
+                        </GridModule>
+                        <GridModule>
+                            <div className='grid-el '></div>
+                            <div className='grid-el '></div>
+                            <div className='grid-el '></div>
+                            <div className='grid-el '></div>
+                        </GridModule>
+                    </div>
+                    <div className="grid-column">
+                        <GridModule className="grid-reverse">
+                            <div className='grid-el '></div>
+                            <div className='grid-el '></div>
+                            <div className='grid-el '></div>
+                            <div className='grid-el '></div>
+                        </GridModule>
+                        <GridModule>
+                            <div className='grid-el '></div>
+                            <div className='grid-el '></div>
+                            <div className='grid-el '></div>
+                            <div className='grid-el '></div>
+                        </GridModule>
+                        <GridModule className="grid-reverse">
+                            <div className='grid-el '></div>
+                            <div className='grid-el '></div>
+                            <div className='grid-el '></div>
+                            <div className='grid-el '></div>
+                        </GridModule>
+                    </div>
                 </DraggableDiv>
             </div>
         </AnimatedMain>
