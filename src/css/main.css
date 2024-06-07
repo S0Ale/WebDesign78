@@ -157,6 +157,42 @@ nav{
     height: 1.4em;
 }
 
+/* -- Serach Nav -- */
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Push the search bar to the far right */
+    position: relative;
+}
+
+.search-input {
+    border: 1px solid #ccc; /* Adjust border color as needed */
+    padding: 5px 10px;
+    width: 200px; /* Adjust width as needed */
+    outline: none;
+    padding-right: 30px; /* Add padding to the right to make space for the icon */
+    font-family: var(--sub-family);
+    background: transparent; 
+}
+
+.search-input:focus {
+    border-color: #000; /* Adjust focus border color as needed */
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px; /* Adjust to position the icon within the input */
+    color: #888; /* Adjust icon color as needed */
+    pointer-events: none; /* Prevents the icon from blocking input clicks */
+}
+
+.nav-drop-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
 /* -- Footer -- */
 
 footer{
