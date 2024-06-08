@@ -14,33 +14,12 @@ const ArticleGrid = () => {
                 <DraggableDiv className="flex row article-grid" constraints={constraints}>
                     <div className="grid-column">
                         <GridModule>
-                            <ArticleCard className='medium green' id={0}>
-                                <div className="line">Se non hai i</div>
-                                <div className="line"><span className="highlight2">MATTONI</span></div>
-                                <div className="line">usa i</div>
-                                <div className="line"><span className="highlight1 vert">DRONI</span></div>
-                            </ArticleCard>
-                            <ArticleCard className='red' id={1}>
-                                <div className="line">Alza un</div>
-                                <div className="line down"><span className="highlight1">MURO</span> e passa la</div>
-                                <div className="line right"><span className="highlight1">PAURA</span></div>
-                            </ArticleCard>
-                            <ArticleCard className='orange' id={2}>
-                                <div className="line">Europei del</div>
-                                <div className="line"><span className="highlight2">SALTO DEL</span></div>
-                                <div className="line right"><span className="highlight1">MURO</span></div>
-                            </ArticleCard>
-                            <ArticleCard className='big blue' id={3}>
-                                <div className="line">Ma perchè non un</div>
-                                <div className="line"><span className="highlight1">MURO</span></div>
-                                <div className="line"><span className="highlight2">GALLEGGIANTE</span></div>
-                            </ArticleCard>
+                            <ArticleCard className='medium green' id={0}/>
+                            <ArticleCard className='red' id={1}/>
+                            <ArticleCard className='orange' id={2}/>
+                            <ArticleCard className='big blue' id={3}/>
                         </GridModule>
                         <GridModule>
-                            <ArticleCard className="big"></ArticleCard>
-                            <ArticleCard className=""></ArticleCard>
-                            <ArticleCard className=""></ArticleCard>
-                            <ArticleCard className="medium"></ArticleCard>
                         </GridModule>
                         <GridModule>
                             <div className='grid-el medium'></div>
