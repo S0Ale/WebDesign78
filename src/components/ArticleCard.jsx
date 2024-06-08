@@ -8,7 +8,7 @@ const ArticleCard = (props) => {
     const idName = "art-" + props.id;
     
     const handleClick = () => {
-        navigate('/article', { state: { def: props.id } });
+        navigate('/article', { state: { def: props.id } }); // DA CAAMBIARE: reindirizza direttamente alla lettura dell'articolo
     };
     
     if(!FormattedTitles[props.id]) return <></>;
