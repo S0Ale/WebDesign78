@@ -4,6 +4,7 @@ import GridModule from '../components/GridModule';
 import AnimatedMain from '../animations/AnimatedMain';
 import DraggableDiv from '../animations/DraggableArea';
 import '../css/grid.css';
+import '../css/card.css';
 
 const ArticleGrid = () => {
     const constraints = useRef(null);

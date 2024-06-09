@@ -1,0 +1,38 @@
+.grid-el{
+    background-color: transparent;
+    position: relative;
+    font-size: 1.1vw;
+    z-index: 0;
+}
+.grid-el::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: url('../assets/small.svg');
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: contrast(2);
+    z-index: -1;
+}
+
+.grid-el div{
+    height: fit-content;
+}
+
+.article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s;
+    background-color: transparent;
+}
+.article:hover{
+    transform: scale(1.03);
+}

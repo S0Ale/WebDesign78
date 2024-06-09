@@ -5,14 +5,14 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 import GenButton from './GenButton';
-import Logo from '../assets/logo.png';
+import Logo from './Logo';
 
 const Navbar = () => {
     return (
         <nav className="col-12 flex row layer1">
             <div className="col-12 flex row nav-wrapper">
                 <div className="logo">
-                    <img src={Logo} alt=""/>
+                    <Logo />
                 </div>
                 <div className="h-fluid flex row links">
                     <Link to="/" className='nav-link'>Home</Link>
