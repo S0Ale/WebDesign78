@@ -34,23 +34,28 @@ const Categories = () => {
     const ArtV = [Art11,Art12,Art13];
 
     let RenderArt = [];
+    let Class='article_categoria_';
     let exact_id=0;
 
     switch(i){
         case 0:
             RenderArt=ArtA;
+            Class+='four';
             break;
         case 1:
             RenderArt=ArtR;
             exact_id=exact_id+ArtA.length;
+            Class+='four';
             break;
         case 2:
-            RenderArt=ArtB;
+            RenderArt=ArtB; 
             exact_id=exact_id+ArtA.length+ArtR.length;
+            Class+='three';
             break;
         case 3:
             RenderArt=ArtV;
             exact_id=exact_id+ArtA.length+ArtR.length+ArtB.length;
+            Class+='three';
             break;  
     }
     
@@ -76,12 +81,7 @@ const Categories = () => {
 
     return (
         <AnimatedMain className="h-fluid flex main-art">
-            <div className='slide_counter flex'>
-                <p id='current_slide'>{i+1}</p>
-                <p>/</p>
-                <p id='total_slide'>{maxC+1}</p>
-            </div>
-            <div className="article_categoria">
+            <div className={Class}>
                 {RenderArt.map((art, i) => (
                     <button onClick={() => handleClick(i)}>
                         <img src={art} className='article_sing'/> 

@@ -8,39 +8,31 @@ body{
     justify-content: space-between;
 }
 
-.article_categoria{
+.article_categoria_four, .article_categoria_three{
+    margin-left: 5%;
     display: flex;
-    width: 75%;
-    height: 60%;
+    flex-wrap: wrap;
+    width: 70%;
+    height: fit-content;
     padding: 5px;
     background-color: rgb(223, 223, 232);
 }
 
-.article_categoria button{
+.article_categoria_four button{
+    width: 50%;
     background-color: aqua;
     border: 1px solid black;
+}
+
+.article_categoria_three button{
+    width: 33.33%;
+    background-color: aqua;
+    border: 1px solid red;
 }
 
 .article_sing{
     position: relative;
     margin: 5px;
-}
-
-.slide_counter{
-    background-image: url('../assets/cartafondo.png');
-    background-size: cover;
-    width: 180px;
-    padding: 15px;
-    font-size: 3.5em;
-    font-weight: bold;
-}
-
-.slide_counter #current_slide {
-    transform: translateY(-20px);
-}
-
-#total_slide {
-    transform: translateY(20px);
 }
 
 #arrow_menu{
