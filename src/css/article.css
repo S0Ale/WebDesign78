@@ -8,9 +8,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70%;
-    height: 70%;
+    width: 50%;
+    height: 65%;
     padding: 5px; 
+}
+
+.grid-el{
+    width: 100%;
+    height: 100%;
 }
 
 .article_textbox .article{
@@ -47,6 +52,8 @@
 }
 
 .readMore{
+    width: 100%;
+    height: 100%;
     background-color: transparent;
 }
 
