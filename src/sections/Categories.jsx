@@ -35,7 +35,7 @@ const Categories = () => {
 
     return (
         <AnimatedMain className="h-fluid flex main-art">
-            <div className='article_categoria'>
+            <div className='grid article_categoria'>
                 {
                     range(6, catIndex[i]).map((id) => {
                         return <ArticleCard onClick={handleClick} id={id} key={id}/>

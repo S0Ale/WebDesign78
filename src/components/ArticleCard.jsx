@@ -13,10 +13,11 @@ const ArticleCard = (props) => {
     
     if(!FormattedTitles[props.id]) return <></>;
 
+    let color = FormattedTitles[props.id].class;
     return (
-        <button className={names} id={idName} onClick={handleClick}>
+        <button className={`${names} ${color}`} id={idName} onClick={handleClick}>
             <div className='debug1'>
-                {FormattedTitles[props.id]()}
+                {FormattedTitles[props.id].title()}
             </div>
         </button>
     );
