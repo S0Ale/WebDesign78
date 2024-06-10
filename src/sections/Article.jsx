@@ -1,34 +1,19 @@
 import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import React from 'react';
-import data from '../data/article-text.json';
-import scopri from '../assets/scopri.png';
 import AnimatedMain from '../animations/AnimatedMain';
+import ArticleCard from '../components/ArticleCard';
 import '../css/article.css';
+import data from '../data/article-text.json';
 
-import Art0 from '../articles/arancione1.png';
-import Art1 from '../articles/arancione2.png';
-import Art2 from '../articles/arancione3.png';
-import Art3 from '../articles/arancione4.png';
-
-import Art4 from '../articles/rosso1.png';
-import Art5 from '../articles/rosso2.png';
-import Art6 from '../articles/rosso3.png';
-import Art7 from '../articles/rosso4.png';
-
-import Art8 from '../articles/blu1.png';
-import Art9 from '../articles/blu2.png';
-import Art10 from '../articles/blu3.png';
-
-import Art11 from '../articles/verde1.png';
-import Art12 from '../articles/verde2.png';
-import Art13 from '../articles/verde3.png';
-
-const Art = [Art0,Art1,Art2,Art3,Art4,Art5,Art6,Art7,Art8,Art9,Art10,Art11,Art12,Art13];
+const Art = [<ArticleCard className='' id={0}/>,<ArticleCard className='' id={1}/>,<ArticleCard className='' id={2}/>,<ArticleCard className='' id={3}/>,<ArticleCard className='' id={4}/>,<ArticleCard className='' id={5}/>,
+<ArticleCard className='' id={6}/>,<ArticleCard className='' id={7}/>,<ArticleCard className='' id={8}/>,<ArticleCard className='' id={9}/>,<ArticleCard className='' id={10}/>,<ArticleCard className='' id={11}/>,
+<ArticleCard className='' id={12}/>,<ArticleCard className='' id={13}/>,<ArticleCard className='' id={14}/>,<ArticleCard className='' id={15}/>,<ArticleCard className='' id={16}/>,<ArticleCard className='' id={17}/>,
+<ArticleCard className='' id={18}/>,<ArticleCard className='' id={19}/>,<ArticleCard className='' id={20}/>,<ArticleCard className='' id={21}/>,<ArticleCard className='' id={22}/>,<ArticleCard className='' id={23}/>];
 
 const Article = () => {
     const minCount = 0;
-    const maxCount = 13;
+    const maxCount = 23;
     const location = useLocation();
     const { def } = location.state || { def: minCount };
     const [id, setCount] = useState(def);
@@ -62,7 +47,7 @@ const Article = () => {
                 <p id='total_slide'>{maxCount+1}</p>
             </div>
             <div className={classe}>
-                <button className='readMore' onClick={readMore}><img className='article' src={Art[id]}/></button>
+                <button className='readMore' onClick={readMore}>{Art[id]}</button>
             </div>
             <div className='flex column'>
                 <button id='arrow_menu' className='circle' onClick={increment}><span id="arrow" className="material-symbols-outlined circle">keyboard_arrow_up</span></button>

@@ -2,25 +2,9 @@ import React from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AnimatedMain from '../animations/AnimatedMain';
+import ArticleCard from '../components/ArticleCard';
 import '../css/categories.css';
 
-import Art0 from '../articles/arancione1.png';
-import Art1 from '../articles/arancione2.png';
-import Art2 from '../articles/arancione3.png';
-import Art3 from '../articles/arancione4.png';
-
-import Art4 from '../articles/rosso1.png';
-import Art5 from '../articles/rosso2.png';
-import Art6 from '../articles/rosso3.png';
-import Art7 from '../articles/rosso4.png';
-
-import Art8 from '../articles/blu1.png';
-import Art9 from '../articles/blu2.png';
-import Art10 from '../articles/blu3.png';
-
-import Art11 from '../articles/verde1.png';
-import Art12 from '../articles/verde2.png';
-import Art13 from '../articles/verde3.png';
 
 const Categories = () => {
     const nav = useNavigate();
@@ -28,34 +12,25 @@ const Categories = () => {
     const maxC = 3;
     const [i, setI] = useState(minC);
 
-    const ArtA = [Art0,Art1,Art2,Art3];
-    const ArtR = [Art4,Art5,Art6,Art7];
-    const ArtB = [Art8,Art9,Art10];
-    const ArtV = [Art11,Art12,Art13];
+    const Cat1 = [<ArticleCard className='' id={0}/>,<ArticleCard className='' id={1}/>,<ArticleCard className='' id={2}/>,<ArticleCard className='' id={3}/>,<ArticleCard className='' id={4}/>,<ArticleCard className='' id={5}/>];
+    const Cat2 = [<ArticleCard className='' id={6}/>,<ArticleCard className='' id={7}/>,<ArticleCard className='' id={8}/>,<ArticleCard className='' id={9}/>,<ArticleCard className='' id={10}/>,<ArticleCard className='' id={11}/>];
+    const Cat3 = [<ArticleCard className='' id={12}/>,<ArticleCard className='' id={13}/>,<ArticleCard className='' id={14}/>,<ArticleCard className='' id={15}/>,<ArticleCard className='' id={16}/>,<ArticleCard className='' id={17}/>];
+    const Cat4 = [<ArticleCard className='' id={18}/>,<ArticleCard className='' id={19}/>,<ArticleCard className='' id={20}/>,<ArticleCard className='' id={21}/>,<ArticleCard className='' id={22}/>,<ArticleCard className='' id={23}/>];
 
     let RenderArt = [];
-    let Class='article_categoria_';
-    let exact_id=0;
 
     switch(i){
         case 0:
-            RenderArt=ArtA;
-            Class+='four';
+            RenderArt=Cat1;
             break;
         case 1:
-            RenderArt=ArtR;
-            exact_id=exact_id+ArtA.length;
-            Class+='four';
+            RenderArt=Cat2;
             break;
         case 2:
-            RenderArt=ArtB; 
-            exact_id=exact_id+ArtA.length+ArtR.length;
-            Class+='three';
+            RenderArt=Cat3;
             break;
         case 3:
-            RenderArt=ArtV;
-            exact_id=exact_id+ArtA.length+ArtR.length+ArtB.length;
-            Class+='three';
+            RenderArt=Cat4;
             break;  
     }
     
@@ -81,11 +56,11 @@ const Categories = () => {
 
     return (
         <AnimatedMain className="h-fluid flex main-art">
-            <div className={Class}>
+            <div className='article_categoria'>
                 {RenderArt.map((art, i) => (
-                    <button onClick={() => handleClick(i)}>
-                        <img src={art} className='article_sing'/> 
-                    </button>
+                    <div className='article_sing'>
+                        {RenderArt[i]}
+                    </div>
                 ))}
             </div>
             <div className='flex column'>

@@ -8,31 +8,26 @@ body{
     justify-content: space-between;
 }
 
-.article_categoria_four, .article_categoria_three{
+.article_categoria{
     margin-left: 5%;
-    display: flex;
-    flex-wrap: wrap;
-    width: 70%;
-    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+    width: 75%;
+    height: 65%;
     padding: 5px;
-    background-color: rgb(223, 223, 232);
+    background-color: rgba(223, 223, 232, 0.721);
 }
 
-.article_categoria_four button{
-    width: 50%;
-    background-color: aqua;
-    border: 1px solid black;
+.article_categoria .article_sing{
+    background-color: transparent;
 }
 
-.article_categoria_three button{
-    width: 33.33%;
-    background-color: aqua;
-    border: 1px solid red;
-}
-
-.article_sing{
+.grid-el{
+    width: 100%;
+    height: 100%;
     position: relative;
-    margin: 5px;
 }
 
 #arrow_menu{
