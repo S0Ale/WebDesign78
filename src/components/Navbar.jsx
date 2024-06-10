@@ -15,6 +15,10 @@ const Navbar = () => {
         setNavOpen(!navOpen);
     };
 
+    const closeIfMobile = () => {
+        if(window.innerWidth <= 992) setNavOpen(false);
+    };
+
     return (
         <nav className="col-12 flex row layer1">
             <div className="col-12 flex row nav-wrapper">
@@ -24,9 +28,9 @@ const Navbar = () => {
                 </div>
 
                 <div className={`h-fluid flex row links ${navOpen? 'nav-show' : ''}`}>
-                    <Link to="/" className='nav-link'>Home</Link>
-                    <Link to="/categories" className="nav-link">Categorie</Link>
-                    <Link to="/about" className="nav-link">About</Link>
+                    <Link to="/" className='nav-link' onClick={closeIfMobile}>Home</Link>
+                    <Link to="/categories" className="nav-link" onClick={closeIfMobile}>Categorie</Link>
+                    <Link to="/about" className="nav-link" onClick={closeIfMobile}>About</Link>
                 </div>
                 
                 <div className="search-bar">
