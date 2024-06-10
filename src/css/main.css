@@ -127,8 +127,13 @@ nav{
     margin-right: 40px;
 }
 
-.logo svg{
+.logo .logo-std{
     width: 200px;
+}
+
+.logo-resp{
+    display: none;
+    height: 35px;
 }
 
 .links{
@@ -150,13 +155,12 @@ nav{
 
 .nav-drop-btn{
     display: none;
-    margin-right: 20px;
     padding: 10px 15px;
     background: transparent;
 }
 
 .nav-drop-btn svg{
-    height: 1.4em;
+    height: 1em;
 }
 
 /* -- Serach Nav -- */
@@ -231,8 +235,8 @@ footer svg:hover{
         justify-content: space-between;
     }
 
-    .logo img{
-        margin: 0 30px;
+    nav .logo{
+        margin-right: 0;
     }
 
     .links{
@@ -244,6 +248,15 @@ footer svg:hover{
     }
 
     .nav-drop-btn{
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    nav .logo-std{
+        display: none;
+    }
+    .logo-resp{
         display: block;
     }
 }

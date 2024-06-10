@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import AnimatedMain from '../animations/AnimatedMain';
 import '../css/home.css';
-import Logo from '../components/Logo';
+import { Logo } from '../components/Logos';
 
 const Home = () => {
     return (
         <AnimatedMain className="h-fluid flex column main-home">
-            <div className='container'>
+            <div className='flex column container'>
                 <div className="title">
                     <Logo />
                 </div>
