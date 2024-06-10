@@ -16,8 +16,8 @@ const Navbar = () => {
                 </div>
                 <div className="h-fluid flex row links">
                     <Link to="/" className='nav-link'>Home</Link>
-                    <Link to="article" className="nav-link">Indice articoli</Link>
-                    <Link to="about" className="nav-link">About</Link>
+                    <Link to="/categories" className="nav-link">Indice articoli</Link>
+                    <Link to="/about" className="nav-link">About</Link>
                 </div>
                 <div className="search-bar">
                     <input type="text" placeholder="Search..." className="search-input" />

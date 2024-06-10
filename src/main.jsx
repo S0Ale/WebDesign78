@@ -11,8 +11,9 @@ import { AnimatePresence } from 'framer-motion';
 
 import App from './App';
 import Home from './sections/Home';
-import Article from './sections/Article';
 import ArticleGrid from './sections/ArticleGrid';
+import Categories from './sections/Categories';
+import Article from './sections/Article';
 import About from "./sections/About";
 
 const router = createBrowserRouter(
@@ -22,6 +23,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<App><Outlet/></App>}>
       <Route exact path="/"index element={<Home />} />
       <Route path="/article" index element={<Article />} />
+      <Route path="/categories" index element={<Categories />} />
       <Route path="/articleGrid" element={<ArticleGrid />} />
       <Route path="/about" element={<About />} />
     </Route>

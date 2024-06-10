@@ -8,51 +8,22 @@ body{
     justify-content: space-between;
 }
 
-.article_textbox{
-    position: relative;
+.article_categoria{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70%;
-    height: 70%;
-    padding: 5px; 
+    width: 75%;
+    height: 60%;
+    padding: 5px;
+    background-color: rgb(223, 223, 232);
 }
 
-.article_textbox .article{
-    max-height: 400px;
+.article_categoria button{
+    background-color: aqua;
+    border: 1px solid black;
 }
 
-.article_textbox_expand .article{
-    display: none;
-}
-
-.article_textbox_expand{
+.article_sing{
     position: relative;
-    width: 650px;
-    height: 70%;
-    padding: 10px; 
-    background-color: hsl(0, 0%, 65%);
-}
-
-.article_textbox_expand h1{
-    font-size: 3em;
-    font-weight: bold;
-    margin: 15px 30px;
-}
-
-.article_textbox_expand h2{
-    font-size: 1.3em;
-    margin: 0px 30px;
-}
-
-.article_textbox_expand p{
-    font-size: 1.2em;
-    margin: 0px 30px;
-    height: 100%;
-}
-
-.readMore{
-    background-color: transparent;
+    margin: 5px;
 }
 
 .slide_counter{
