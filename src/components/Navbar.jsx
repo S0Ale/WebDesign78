@@ -2,13 +2,15 @@ import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
+import SearchBar from './SearchBar';
 import GenButton from './GenButton';
 import { Logo, LogoResponsive } from './Logos';
 
+
 const Navbar = () => {
+    
     const [navOpen, setNavOpen] = useState(false); // responsive dropdown menu
 
     const toggleNav = () => {
@@ -32,11 +34,7 @@ const Navbar = () => {
                     <Link to="/categories" className="nav-link" onClick={closeIfMobile}>Categorie</Link>
                     <Link to="/about" className="nav-link" onClick={closeIfMobile}>About</Link>
                 </div>
-                
-                <div className="search-bar">
-                    <input type="text" placeholder="Search..." className="search-input" />
-                    <FontAwesomeIcon icon={faSearch} className="search-icon" />
-                </div>
+                <SearchBar/>
                 <GenButton className="nav-toggle" onClick={toggleNav}>
                     <FontAwesomeIcon icon={faBars}/>
                 </GenButton>
