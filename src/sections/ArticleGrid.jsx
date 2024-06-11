@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useRef } from 'react';
 import ArticleCard from '../components/ArticleCard';
 import GridModule from '../components/GridModule';
