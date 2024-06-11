@@ -2,14 +2,9 @@ import { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import React from 'react';
 import AnimatedMain from '../animations/AnimatedMain';
-import ArticleCard from '../components/ArticleCard';
-import '../css/article.css';
+import FormattedTitles from '../components/FormattedTitles';
 import data from '../data/article-text.json';
-
-const Art = [<ArticleCard className='' id={0}/>,<ArticleCard className='' id={1}/>,<ArticleCard className='' id={2}/>,<ArticleCard className='' id={3}/>,<ArticleCard className='' id={4}/>,<ArticleCard className='' id={5}/>,
-<ArticleCard className='' id={6}/>,<ArticleCard className='' id={7}/>,<ArticleCard className='' id={8}/>,<ArticleCard className='' id={9}/>,<ArticleCard className='' id={10}/>,<ArticleCard className='' id={11}/>,
-<ArticleCard className='' id={12}/>,<ArticleCard className='' id={13}/>,<ArticleCard className='' id={14}/>,<ArticleCard className='' id={15}/>,<ArticleCard className='' id={16}/>,<ArticleCard className='' id={17}/>,
-<ArticleCard className='' id={18}/>,<ArticleCard className='' id={19}/>,<ArticleCard className='' id={20}/>,<ArticleCard className='' id={21}/>,<ArticleCard className='' id={22}/>,<ArticleCard className='' id={23}/>];
+import '../css/article.css';
 
 const Article = () => {
     const minCount = 0;
@@ -37,7 +32,7 @@ const Article = () => {
 
     const readMore = () => {
         setClasse('article_textbox_expand');
-      };
+    };
 
     return (
         <AnimatedMain className="h-fluid flex main-art">
@@ -47,7 +42,11 @@ const Article = () => {
                 <p id='total_slide'>{maxCount+1}</p>
             </div>
             <div className={classe}>
-                <button className='readMore' onClick={readMore}>{Art[id]}</button>
+                <button className='readMore grid-el article' onClick={readMore}>
+                    <div className={`debug1 ${FormattedTitles[id].class}`}>
+                        {FormattedTitles[id].title()}
+                    </div>
+                </button>
             </div>
             <div className='flex column'>
                 <button id='arrow_menu' className='circle' onClick={increment}><span id="arrow" className="material-symbols-outlined circle">keyboard_arrow_up</span></button>

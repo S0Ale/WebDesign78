@@ -1,8 +1,3 @@
-body{
-    background-image: url('../assets/sfondo_low.png');
-    background-size: contain;
-}
-
 .main-art{
     align-items: center;
     justify-content: space-between;
@@ -10,24 +5,23 @@ body{
 
 .article_categoria{
     margin-left: 5%;
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 5px;
+    grid-gap: 20px;
     width: 75%;
     height: 65%;
     padding: 5px;
-    background-color: rgba(223, 223, 232, 0.721);
-}
-
-.article_categoria .article_sing{
     background-color: transparent;
 }
 
-.grid-el{
+.article_categoria .grid-el{
     width: 100%;
     height: 100%;
     position: relative;
+    font-size: 1vw;
+}
+.grid-el::before{
+    background-image: url('../assets/big.svg') !important;
 }
 
 #arrow_menu{

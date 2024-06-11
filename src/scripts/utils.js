@@ -10,4 +10,8 @@ function onTrigger(el, event, handler, capture=false){
     el.addEventListener(event, handler, capture);
 }
 
-export { query, onTrigger };
+function range(size, startAt = 0) {
+    return [...Array(size).keys()].map(i => i + startAt);
+}
+
+export { query, onTrigger, range };

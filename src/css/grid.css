@@ -92,3 +92,11 @@
     transform: scaleY(1.3);
     line-height: normal !important;
 }
+
+@media only screen and (max-width: 992px){
+    .constraint-area{
+        width: calc(100%);
+        left: 0;
+        right: 0;
+    }
+}
