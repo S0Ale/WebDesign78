@@ -14,6 +14,7 @@ import { key } from 'localforage';
 // Voglio posizionare il div draggabile in una posizione piu' centrale:
 // uso come riferimento il grid container con l'id focus
 const startFromCenter = () => {
+
     const container = query('#dragarea');
     const focusRect = query('#focus').getBoundingClientRect();
 
