@@ -152,8 +152,11 @@
         font-size: 2vw;
     }
     .article-grid .medium{
-        padding-left: 0;
-        font-size: 2.4vw !important;
+        padding-left: 10px;
+        font-size: 2.5vw !important;
+    }
+    .article-grid .big{
+        font-size: 4vw !important;
     }
 
     /*

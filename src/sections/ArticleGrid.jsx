@@ -27,7 +27,7 @@ const ArticleGrid = () => {
     const constraints = useRef(null);
 
     useEffect(() => {
-        startFromCenter();
+        if(window.innerWidth > 992) startFromCenter(); // not if mobile
     }, []);
 
     return (
