@@ -9,7 +9,6 @@ import DraggableDiv from '../animations/DraggableArea';
 import { query } from '../scripts/utils';
 import '../css/grid.css';
 import '../css/card.css';
-import { key } from 'localforage';
 
 // Voglio posizionare il div draggabile in una posizione piu' centrale:
 // uso come riferimento il grid container con l'id focus
