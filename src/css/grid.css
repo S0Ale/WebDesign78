@@ -16,17 +16,37 @@
     right: 100px;
 }
 
+.grid-container{
+    column-count: 2;
+    column-gap: 60px;
+}
+
+#focus{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    border-width: 10px;
+}
+
 .article-grid{
+    position: absolute;
+    /*
+    top: -500px;
+    right: -700px;
+    */
     width: fit-content;
     background: var(--article-area-bg);
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 60px;
 
     /*
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 40px;
-    */
     column-count: 2;
     column-gap: 60px;
+    */
 }
 
 /* -- Grid Layout -- */
@@ -50,12 +70,12 @@
 }
 
 .medium{
-    padding-left: 60px;
+    padding-left: 40px;
     grid-row: span 2;
     font-size: 1.3vw !important;
 }
 .medium::before{
-    background-image: url('../assets/medium.svg');
+    background-image: url('../assets/medium.svg') !important;
 }
 .big{
     grid-row: span 2;
@@ -63,7 +83,7 @@
     font-size: 2vw !important;
 }
 .big::before{
-    background-image: url('../assets/big.svg');
+    background-image: url('../assets/big.svg') !important;
 }
 
 /* -- Articles -- */
@@ -98,5 +118,56 @@
         width: calc(100%);
         left: 0;
         right: 0;
+    }
+
+    .article-grid{
+        position: static;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-gap: 40px;
+    }
+
+    .grid-container{
+        column-count: 1;
+        column-gap: 0;
+        flex-direction: column;
+    }
+
+    #focus{
+        grid-column-start: 1;
+        grid-row-start: 1;
+        border-width: 0;
+    }
+
+    .dummy{
+        display: none !important;
+    }
+
+    .grid-module{
+        --element-dim: 50vw;
+        grid-gap: 20px;
+    }
+
+    .article-grid .grid-el{
+        font-size: 2vw;
+    }
+    .article-grid .medium{
+        padding-left: 0;
+        font-size: 2.4vw !important;
+    }
+
+    /*
+    .grid-column{
+        width: 100%;
+    }
+
+    .grid-module{
+        width: 100%;
+        --element-dim: 1fr;
+    }
+    */
+
+    .grid-column:nth-of-type(even){
+        margin-top: 60px;
     }
 }

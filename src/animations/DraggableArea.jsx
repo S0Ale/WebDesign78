@@ -5,7 +5,7 @@ const DraggableArea = (props) => {
     const dragControls = useDragControls();
 
     return (
-        <motion.div className={props.className}
+        <motion.div className={props.className} id={props.id}
             drag
             dragControls={dragControls}
             dragConstraints={props.constraints}

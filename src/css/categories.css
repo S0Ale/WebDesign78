@@ -20,7 +20,7 @@
     position: relative;
     font-size: 1vw;
 }
-.grid-el::before{
+.article_categoria .grid-el::before{
     background-image: url('../assets/big.svg') !important;
 }
 

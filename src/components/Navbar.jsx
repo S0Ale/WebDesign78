@@ -8,6 +8,9 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import GenButton from './GenButton';
 import { Logo, LogoResponsive } from './Logos';
 
+// DA FARE, IL TASTO HOME DEVE CONDURRE ALLA BACHECA,
+// IL LINK CHE CONDUCE ALLA HOME SARA' IL LOGO
+
 const Navbar = () => {
     const [navOpen, setNavOpen] = useState(false); // responsive dropdown menu
 
