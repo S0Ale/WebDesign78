@@ -125,6 +125,7 @@ nav{
 }
 
 .logo{
+    display: block;
     margin-right: 40px;
 }
 

@@ -8,9 +8,6 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import GenButton from './GenButton';
 import { Logo, LogoResponsive } from './Logos';
 
-// DA FARE, IL TASTO HOME DEVE CONDURRE ALLA BACHECA,
-// IL LINK CHE CONDUCE ALLA HOME SARA' IL LOGO
-
 const Navbar = () => {
     const [navOpen, setNavOpen] = useState(false); // responsive dropdown menu
 
@@ -25,13 +22,13 @@ const Navbar = () => {
     return (
         <nav className="col-12 flex row layer1">
             <div className="col-12 flex row nav-wrapper">
-                <div className="logo">
+                <Link to="/" className="logo">
                     <Logo />
                     <LogoResponsive />
-                </div>
+                </Link>
 
                 <div className={`h-fluid flex row links ${navOpen? 'nav-show' : ''}`}>
-                    <Link to="/" className='nav-link' onClick={closeIfMobile}>Home</Link>
+                    <Link to="/articleGrid" className='nav-link' onClick={closeIfMobile}>Home</Link>
                     <Link to="/categories" className="nav-link" onClick={closeIfMobile}>Categorie</Link>
                     <Link to="/about" className="nav-link" onClick={closeIfMobile}>About</Link>
                 </div>
