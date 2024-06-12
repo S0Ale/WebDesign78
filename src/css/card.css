@@ -83,3 +83,15 @@
 .orange svg g{
     fill: var(--orange-art);
 }
+
+@media only screen and (max-width: 768px){
+    .article .card-content{
+        margin: 0 0 10px 0;
+    }
+    .medium .card-content{
+        margin: 0 0 40px 0;
+    }
+    .big .card-content{
+        margin: 50px 0 0 0;
+    }
+}

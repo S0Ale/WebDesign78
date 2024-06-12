@@ -276,7 +276,7 @@ footer svg:hover{
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px){
     nav .logo-std{
         display: none;
     }
