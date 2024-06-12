@@ -16,30 +16,11 @@
     right: 100px;
 }
 
-.grid-container{
-    column-count: 2;
-    column-gap: 60px;
-}
-
-#focus{
-    grid-column-start: 2;
-    grid-row-start: 2;
-    border-width: 10px;
-}
-
 .article-grid{
-    position: absolute;
-    /*
-    top: -500px;
-    right: -700px;
-    */
     width: fit-content;
     background: var(--article-area-bg);
-
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 60px;
-
+    column-count: 2;
+    column-gap: 60px;
     /*
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
