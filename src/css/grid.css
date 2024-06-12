@@ -102,22 +102,9 @@
     }
 
     .article-grid{
-        position: static;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(1, 1fr);
-        grid-gap: 40px;
-    }
-
-    .grid-container{
+        flex-direction: column;
         column-count: 1;
         column-gap: 0;
-        flex-direction: column;
-    }
-
-    #focus{
-        grid-column-start: 1;
-        grid-row-start: 1;
-        border-width: 0;
     }
 
     .dummy{
