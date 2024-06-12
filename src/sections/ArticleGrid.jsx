@@ -4,35 +4,15 @@ import GridModule from '../components/GridModule';
 import AnimatedMain from '../animations/AnimatedMain';
 import DraggableDiv from '../animations/DraggableArea';
 
-import { query } from '../scripts/utils';
 import '../css/grid.css';
 import '../css/card.css';
 
 const ArticleGrid = () => {
     const constraints = useRef(null);
 
-    // NON FUNZIONA SE UNO RICARICA LA PAGINA, MA SE SI NAVIGA DA UNA PAGINA ALL'ALTRA FUNZIONA
-    // noto che calcola i constraints solo una volta
-    //useEffect(() => {
-        //console.log(window.innerWidth);
-        //if(window.innerWidth > 992) startFromCenter(); // not if mobile
-    //});
-
-    // Voglio posizionare il div draggabile in una posizione piu' centrale:
-    // uso come riferimento il grid container con l'id focus
-    const startFromCenter = () => {
-        const container = query('#dragarea');
-        const focusRect = query('#focus').getBoundingClientRect();
-
-        const x = focusRect.width + 60;
-        const y = focusRect.height + 60;
-        container.style.top = `-${y}px`;
-        container.style.left = `-${x}px`;
-    }
-
     return (
         <AnimatedMain className="main-grid">
-            <div className='h-fluid constraint-area debug2' ref={constraints}>
+            <div className='h-fluid constraint-area' ref={constraints}>
                 <DraggableDiv className="flex row article-grid" id="dragarea" constraints={constraints}>
                     <div className="grid-column">
                         <GridModule>

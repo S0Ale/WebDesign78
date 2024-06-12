@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import FormattedTitles from './FormattedTitles';
+import { ArticleHeader } from '../components/Logos';
 
 const ArticleCard = (props) => {
     const navigate = useNavigate();
@@ -16,8 +17,11 @@ const ArticleCard = (props) => {
     let color = FormattedTitles[props.id].class;
     return (
         <button className={`${names} ${color}`} id={idName} onClick={handleClick}>
-            <div className='debug1'>
+            <div className='card-content'>
                 {FormattedTitles[props.id].title()}
+            </div>
+            <div className="article-header">
+                <ArticleHeader/>
             </div>
         </button>
     );

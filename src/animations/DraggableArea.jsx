@@ -9,7 +9,6 @@ const DraggableArea = (props) => {
             drag
             dragControls={dragControls}
             dragConstraints={props.constraints}
-            onMeasureDragConstraints={console.log}
             style={{ touchAction: "none" }}
 
             onDragStart={() => {
