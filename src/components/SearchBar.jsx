@@ -19,10 +19,7 @@ const SearchBar = () => {
                 let title_low=FormattedTitles[c].title_plain.toLowerCase();
                 let input_low=inputValue.toLowerCase();
                 if(checkStringMatch(title_low, input_low)){
-                    if (window.location.pathname !== '/WebDesign78/article')
-                        navigate('/article', { state: { def: c } });
-                    else
-                        navigate(location.pathname, { state: { def: c } });
+                    navigate('/article', { state: { def: c }, replace: true });
                     break;
                 }
             }

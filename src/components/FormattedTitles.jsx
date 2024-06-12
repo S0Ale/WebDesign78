@@ -1,4 +1,4 @@
-const Titles = [
+const FormattedTitles = [
     //id 0
     {
         class: 'green',
@@ -202,4 +202,4 @@ const Titles = [
     },
 ];
 
-export default Titles;
+export default FormattedTitles;

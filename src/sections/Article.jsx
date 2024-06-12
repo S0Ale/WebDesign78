@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import React from 'react';
 import AnimatedMain from '../animations/AnimatedMain';
@@ -13,6 +13,10 @@ const Article = () => {
     const { def } = location.state || { def: minCount };
     const [id, setCount] = useState(def);
     const [classe, setClasse] = useState('article_textbox');
+
+    useEffect(() => {
+        setCount(def);
+      }, [def]); 
     
     const increment = () => {
         setCount(prevCount => {
@@ -43,7 +47,7 @@ const Article = () => {
             </div>
             <div className={classe}>
                 <button className='readMore grid-el article' onClick={readMore}>
-                    <div className={`debug1 ${FormattedTitles[id].class}`}>
+                    <div className={FormattedTitles[id].class}>
                         {FormattedTitles[id].title()}
                     </div>
                 </button>
