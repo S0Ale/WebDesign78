@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import AnimatedMain from '../animations/AnimatedMain';
 import ArticleCard from '../components/ArticleCard';
+import CategoriesNames from '../components/CategoriesNames';
 import { range } from '../scripts/utils';
 import '../css/categories.css';
 
@@ -13,6 +14,7 @@ const Categories = () => {
     const maxC = 3;
     const [i, setI] = useState(minC);
     const catIndex = [0, 6, 12, 18]; // starting index of each category
+    const titleClass= 'cat-title ' + CategoriesNames[i].color;
     
     const inc = () => {
         setI(prevCount => {
@@ -35,6 +37,9 @@ const Categories = () => {
 
     return (
         <AnimatedMain className="h-fluid flex main-art">
+            <div className={titleClass}>
+                {CategoriesNames[i].name}
+            </div>
             <div className='grid article_categoria'>
                 {
                     range(6, catIndex[i]).map((id) => {

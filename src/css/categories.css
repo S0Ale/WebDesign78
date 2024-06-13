@@ -3,15 +3,67 @@
     justify-content: space-between;
 }
 
+
+.cat-title{
+    position: absolute;
+    top: 105px;
+    font-size: clamp(24px,3vw,36px);
+    font-weight: bolder;
+    font-family: var(--title-family);
+    max-width: 95%;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0px 10px 10px 0px;
+    background-image: url('../assets/sfondo_giornale.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cat-title .blue{
+    color: var(--blue-art);
+}
+.cat-title .red{
+    color: var(--red-art);
+}
+.cat-title .green{
+    color: var(--green-art);
+}
+.cat-title .orange{
+    color: var(--orange-art);
+}
+
 .article_categoria{
+    margin-top: 140px;
     margin-left: 5%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 20px;
     width: 75%;
     height: 65%;
     padding: 5px;
     background-color: transparent;
+}
+
+@media (orientation: landscape) {
+    .article_categoria{
+        
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 20px;
+        
+    }
+}
+
+
+@media (orientation: portrait) {
+    /* Qui puoi mettere il tuo stile per quando l'altezza è maggiore della larghezza */
+    .article_categoria {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+
+    .grid-el .card-content{
+        font-size: 1.7vw;
+    }
 }
 
 .article_categoria .grid-el{
@@ -25,10 +77,10 @@
 }
 
 #arrow_menu{
+    transform: translateY(70px);
     background-color: whitesmoke;
-    height: 60px;
-    width: 60px;
-    margin: 10px 0;
+    height: 70px;
+    width: 70px;
     transition: background-color 0.25s ease;
 }
 
@@ -40,7 +92,6 @@
 
 #arrow_menu:hover{
     background-color: hsl(0, 0%, 80%);
-    cursor: pointer;
 }
 
 #arrow_menu:active{
