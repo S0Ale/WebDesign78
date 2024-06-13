@@ -31,11 +31,15 @@
     background-color: transparent;
 }
 .article:hover{
-    transform: scale(1.03);
+    transform: scale(1.04);
 }
 
 .article .card-content{
     position: relative;
+    transition: filter .2s;
+}
+.article:hover .card-content{
+    filter: grayscale(0.4);
 }
 
 .article .card-content{

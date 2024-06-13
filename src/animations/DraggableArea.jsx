@@ -5,10 +5,11 @@ const DraggableArea = (props) => {
     const dragControls = useDragControls();
 
     return (
-        <motion.div className={props.className} id={props.id}
+        <motion.div layout className={props.className} id={props.id}
             drag
             dragControls={dragControls}
             dragConstraints={props.constraints}
+            dragTransition={{type: "inertia", power:0.2, timeConstant: 200}}
             style={{ touchAction: "none" }}
 
             onDragStart={() => {
