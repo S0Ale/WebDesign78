@@ -81,13 +81,14 @@
 }
 
 .line span{
-    line-height: 100%;
+    line-height: .9;
 }
 
 .up{align-items: start;}
 .down{align-items: end;}
 .left{justify-content: start;}
 .right{justify-content: end;}
+.center{justify-content: center;}
 
 .vert{
     transform: scaleY(1.3);

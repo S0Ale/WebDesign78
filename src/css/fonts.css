@@ -11,7 +11,14 @@
     color: var(--orange-art);
 }
 
-.highlight1, .highlight2{
+.left-space{
+    margin-left: .2em;
+}
+.right-space{
+    margin-right: .2em;
+}
+
+.highlight1, .highlight2, .highlight3{
     font-weight: 900;
     font-family: var(--title-family);
 }
@@ -21,4 +28,7 @@
 }
 .highlight2{
     font-size: 2.5em;
+}
+.highlight3{
+    font-size: 2em;
 }
