@@ -17,7 +17,7 @@ const Categories = () => {
 
     useEffect(() => {
         setI(def);
-      }, [def]); 
+    }, [def]); 
 
     const inc = () => {
         setI(prevCount => {
@@ -39,15 +39,18 @@ const Categories = () => {
     };
 
     return (
-        <AnimatedMain className="h-fluid flex main-art">
-            <div className='grid article_categoria'>
+        <AnimatedMain className="h-fluid flex column main-art">
+            <div className={`grid-header ${CategoriesNames[i].color}`}>
+                <h1>{CategoriesNames[i].name}</h1>
+            </div>
+            <div className='h-fluid grid article_categoria'>
                 {
                     CategoriesNames[i].index.map((id) => {
                         return <ArticleCard onClick={handleClick} id={id} key={id}/>
                     })
                 }
             </div>
-            <div className='flex column'>
+            <div className='flex column cat-select'>
                 <button id='arrow_menu' className='circle' onClick={inc}><span id="arrow" className="material-symbols-outlined circle">keyboard_arrow_up</span></button>
                 <button id='arrow_menu' className='circle' onClick={dec}><span id="arrow" className="material-symbols-outlined circle">keyboard_arrow_down</span></button>
             </div>
