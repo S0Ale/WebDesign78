@@ -154,9 +154,15 @@ nav{
     font-family: var(--text-family);
     font-weight: 500;
     transition: color .2s;
+    background: transparent;
+    cursor: pointer;
 }
 .nav-link:hover{
     color: var(--text-hover);
+}
+button.nav-link{
+    display: inline;
+    font-size: inherit;
 }
 
 .nav-toggle{
@@ -168,60 +174,37 @@ nav{
 .nav-toggle svg{
     height: 1em;
 }
-/* Stile di base per il menù a tendina */
-.dropdown {
-    display: block;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    font-family: var(--text-family);
-    font-weight: 500;
+
+.dropdown{
+    position: relative;
+}
+.dropdown:hover{
+    color: inherit;
+}
+.dropdown span{
+    transition: color .2s;
+}
+.dropdown:hover span{
+    color: var(--text-hover);
 }
 
-/* Cambia il colore di sfondo del menù a tendina quando il mouse è sopra */
-.dropdown:hover {
-    background-color: #f1f1f1;
+.dropdown-menu{
+    position: absolute;
+    left: 0;
+    top: calc(100% + 9px);
+    background: var(--box);
 }
 
-/* Mostra le opzioni quando il menù a tendina è attivo */
-.dropdown:focus {
-    outline: none;
-}
-
-/* Stile delle opzioni */
-.dropdown option {
+.dropdown-item{
+    font-size: .9em;
     padding: 10px;
-    background-color: #E9E9E9;
+    flex: 1;
+    min-width: fit-content;
+    white-space:nowrap;
+    transition: background .2s;
 }
-
-/* Mostra le opzioni quando il menù a tendina è attivo */
-.dropdown:focus option, .dropdown:hover option {
-    display: block;
-    background-color: #E9E9E9;
-}
-
-.red, .blue, .orange, .green{
-    font-weight: bold;
-}
-
-.red:hover, .blue:hover, .orange:hover, .green:hover{
-   background-color: #000;
-}
-
-.red{
-    color: var(--red-art);
-}
-
-.orange{
-    color: var(--orange-art);
-}
-
-.green{
-    color: var(--green-art);
-}
-
-.blue{
-    color: var(--blue-art);
+.dropdown-item:hover{
+    background: var(--nav-hover);
 }
 
 /* -- Search Nav -- */

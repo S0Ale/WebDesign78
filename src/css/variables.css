@@ -19,9 +19,11 @@
     --green-art: #30492f;
     --orange-art: #974218;
 
-    --button: #a2a2a2;
+    --button: black;
     --button-hover: #b1b1b1;
     --button-active: #8c8c8c;
+
+    --nav-hover: rgb(223, 223, 223);
 
     --border: #D1D1D1;
 

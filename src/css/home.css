@@ -41,7 +41,7 @@
     border-radius: 0%;
     margin: auto;
     color: whitesmoke;
-    background-color: black;
+    background-color: var(--button);
     padding: 5px 50px;
 }
 
