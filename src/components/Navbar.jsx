@@ -23,6 +23,7 @@ const Navbar = () => {
     };
 
     const navToCategory = (i) => {
+        closeIfMobile();
         navigate('/categories', { state: { def:  i} });
     };
 
