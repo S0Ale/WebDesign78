@@ -24,7 +24,7 @@
 
 
 @media (orientation: portrait) {
-    /* Qui puoi mettere il tuo stile per quando l'altezza è maggiore della larghezza */
+    
     .article_categoria {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
