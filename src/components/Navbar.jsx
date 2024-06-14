@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
+import DropdownMenu from './DropdownMenu';
 import SearchBar from './SearchBar';
 import GenButton from './GenButton';
 import { Logo, LogoResponsive } from './Logos';
@@ -31,7 +32,7 @@ const Navbar = () => {
 
                 <div className={`h-fluid flex row links ${navOpen? 'nav-show' : ''}`}>
                     <Link to="/articleGrid" className='nav-link' onClick={closeIfMobile}>Home</Link>
-                    <Link to="/categories" className="nav-link" onClick={closeIfMobile}>Categorie</Link>
+                    <DropdownMenu/>
                     <Link to="/about" className="nav-link" onClick={closeIfMobile}>About</Link>
                 </div>
                 <SearchBar/>
