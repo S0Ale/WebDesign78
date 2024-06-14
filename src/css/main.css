@@ -290,6 +290,7 @@ footer svg:hover{
         position: absolute;
         height: fit-content;
         right: 0;
+        left: 0;
         top: 100%;
         flex-direction: column;
         align-items: end;
@@ -297,12 +298,11 @@ footer svg:hover{
     }
 
     .nav-link{
+        text-align: center;
+        width: 100%;
         margin: 0 0 0 20px;
         padding-right: 20px 25px;
         transition: transform .2s;
-    }
-    .nav-link:hover{
-        transform: translateX(-10px);
     }
 
     .nav-show{
@@ -311,6 +311,14 @@ footer svg:hover{
 
     .nav-toggle{
         display: block;
+    }
+
+    .dropdown-menu{
+        position: static;
+    }
+
+    .dropdown-item{
+        padding: 10px 0;
     }
 }
 
