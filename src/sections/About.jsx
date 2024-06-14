@@ -1,5 +1,7 @@
 import React from 'react';
 import AnimatedMain from '../animations/AnimatedMain';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 
 const About = () => {
     return (
@@ -9,7 +11,7 @@ const About = () => {
                     <h1>About</h1>
                 </div>
                 <div className="description">
-                    <p>about about about about about about about</p>
+                    <p><FontAwesomeIcon icon={faExclamationTriangle} /> Pagina Sotto Costruzione</p>
                 </div>
             </div>
             
