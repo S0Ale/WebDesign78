@@ -1,21 +1,24 @@
 import React from 'react';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import AnimatedMain from '../animations/AnimatedMain';
 import ArticleCard from '../components/ArticleCard';
 import CategoriesNames from '../components/CategoriesNames';
-import { range } from '../scripts/utils';
 import '../css/categories.css';
 
 
 const Categories = () => {
     const nav = useNavigate();
+    const location = useLocation();
     const minC = 0;
     const maxC = 3;
-    const [i, setI] = useState(minC);
-    const catIndex = [0, 6, 12, 18]; // starting index of each category
-    const titleClass= 'cat-title ' + CategoriesNames[i].color;
-    
+    const { def } = location.state || { def: minC };
+    const [i, setI] = useState(def);
+
+    useEffect(() => {
+        setI(def);
+      }, [def]); 
+
     const inc = () => {
         setI(prevCount => {
             if(prevCount >= maxC) return minC;
@@ -37,12 +40,9 @@ const Categories = () => {
 
     return (
         <AnimatedMain className="h-fluid flex main-art">
-            <div className={titleClass}>
-                {CategoriesNames[i].name}
-            </div>
             <div className='grid article_categoria'>
                 {
-                    range(6, catIndex[i]).map((id) => {
+                    CategoriesNames[i].index.map((id) => {
                         return <ArticleCard onClick={handleClick} id={id} key={id}/>
                     })
                 }

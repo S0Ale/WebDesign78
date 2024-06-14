@@ -168,6 +168,61 @@ nav{
 .nav-toggle svg{
     height: 1em;
 }
+/* Stile di base per il menù a tendina */
+.dropdown {
+    display: block;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: var(--text-family);
+    font-weight: 500;
+}
+
+/* Cambia il colore di sfondo del menù a tendina quando il mouse è sopra */
+.dropdown:hover {
+    background-color: #f1f1f1;
+}
+
+/* Mostra le opzioni quando il menù a tendina è attivo */
+.dropdown:focus {
+    outline: none;
+}
+
+/* Stile delle opzioni */
+.dropdown option {
+    padding: 10px;
+    background-color: #E9E9E9;
+}
+
+/* Mostra le opzioni quando il menù a tendina è attivo */
+.dropdown:focus option, .dropdown:hover option {
+    display: block;
+    background-color: #E9E9E9;
+}
+
+.red, .blue, .orange, .green{
+    font-weight: bold;
+}
+
+.red:hover, .blue:hover, .orange:hover, .green:hover{
+   background-color: #000;
+}
+
+.red{
+    color: var(--red-art);
+}
+
+.orange{
+    color: var(--orange-art);
+}
+
+.green{
+    color: var(--green-art);
+}
+
+.blue{
+    color: var(--blue-art);
+}
 
 /* -- Search Nav -- */
 
