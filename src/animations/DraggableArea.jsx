@@ -4,12 +4,14 @@ import { query } from "../scripts/utils";
 const DraggableArea = (props) => {
     const dragControls = useDragControls();
 
+    const isMobile = window.innerWidth < 992;
+
     return (
         <motion.div layout className={props.className} id={props.id}
             drag
             dragControls={dragControls}
             dragConstraints={props.constraints}
-            dragTransition={{type: "inertia", power:0.2, timeConstant: 200}}
+            dragTransition={isMobile ? {} : {type: "inertia", power:0.2, timeConstant: 200}}
             style={{ touchAction: "none" }}
 
             onDragStart={() => {
