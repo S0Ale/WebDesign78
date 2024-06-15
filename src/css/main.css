@@ -197,11 +197,15 @@ button.nav-link{
 
 .dropdown-item{
     font-size: .9em;
-    padding: 10px;
+    font-family: var(--sub-family);
+    font-weight: 700;
+    letter-spacing: .05em;
+    padding: 12px 25px;
     flex: 1;
     min-width: fit-content;
     white-space:nowrap;
     transition: background .2s;
+    text-align: left;
 }
 .dropdown-item:hover{
     background: var(--nav-hover);
@@ -222,7 +226,7 @@ button.nav-link{
     width: 200px; /* Adjust width as needed */
     outline: none;
     padding-right: 30px; /* Add padding to the right to make space for the icon */
-    font-family: var(--sub-family);
+    font-family: var(--text-family);
     background: transparent; 
 }
 
@@ -319,6 +323,7 @@ footer svg:hover{
 
     .dropdown-item{
         padding: 10px 0;
+        text-align: center;
     }
 }
 

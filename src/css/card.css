@@ -61,7 +61,7 @@
     background-repeat: no-repeat;
 }
 .article-header{
-    bottom: 5%;
+    bottom: 0;
 }
 .article-grid .article:not(.big) .article-header{
     left: 15%;
@@ -76,7 +76,6 @@
 
 .article-header svg{
     width: 100%;
-    height: 100%
 }
 
 .red svg g{

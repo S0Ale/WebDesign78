@@ -28,7 +28,7 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="col-12 flex row layer1">
+        <nav className="col-12 flex row layer2">
             <div className="col-12 flex row nav-wrapper">
                 <Link to="/" className="logo">
                     <Logo />
