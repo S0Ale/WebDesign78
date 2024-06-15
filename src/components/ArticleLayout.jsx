@@ -28,7 +28,7 @@ const ArticleLayout = (props) => {
                 ))}
             </div>
             <div className='source-article'>
-
+                {data[props.id].source}
             </div>
         </div>
     );
