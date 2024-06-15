@@ -51,7 +51,7 @@ const Article = () => {
                         {FormattedTitles[id].title()}
                     </div>
                 </button>
-                <ArticleLayout id='0'/>
+                <ArticleLayout id={id}/>
             </div>
             <div className='flex column'>
                 <button id='arrow_menu' className='circle' onClick={increment}><span id="arrow" className="material-symbols-outlined circle">keyboard_arrow_up</span></button>
