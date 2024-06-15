@@ -5,6 +5,7 @@ import AnimatedMain from '../animations/AnimatedMain';
 import FormattedTitles from '../components/FormattedTitles';
 import data from '../data/article-text.json';
 import '../css/article.css';
+import '../css/slide.css';
 
 const Article = () => {
     const minCount = 0;
@@ -16,7 +17,7 @@ const Article = () => {
 
     useEffect(() => {
         setCount(def);
-      }, [def]); 
+    }, [def]); 
     
     const increment = () => {
         setCount(prevCount => {
@@ -40,7 +41,7 @@ const Article = () => {
 
     return (
         <AnimatedMain className="h-fluid flex main-art">
-            <div className='slide_counter flex'>
+            <div className='slide_counter flex layer1'>
                 <p id='current_slide'>{id+1}</p>
                 <p>/</p>
                 <p id='total_slide'>{maxCount+1}</p>
@@ -52,7 +53,7 @@ const Article = () => {
                     </div>
                 </button>
             </div>
-            <div className='flex column'>
+            <div className='flex column slide-select'>
                 <button id='arrow_menu' className='circle' onClick={increment}><span id="arrow" className="material-symbols-outlined circle">keyboard_arrow_up</span></button>
                 <button id='arrow_menu' className='circle' onClick={decrement}><span id="arrow" className="material-symbols-outlined circle">keyboard_arrow_down</span></button>
             </div>

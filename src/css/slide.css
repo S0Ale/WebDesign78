@@ -1,0 +1,75 @@
+/* Elementi comuni alla visualizzazione singola e delle categorie */
+
+.slide_counter{
+    position: absolute;
+    left: 0;
+    font-family: 'Antonio';
+    background-image: url('../assets/cartafondo.png');
+    background-size: cover;
+    width: 160px;
+    aspect-ratio: 16/12;
+    font-size: 2.6em;
+    font-weight: bold;
+    align-items: center;
+    padding-left: 1em;
+}
+
+.slide_counter #current_slide {
+    transform: translateY(-20px);
+}
+
+#total_slide {
+    transform: translateY(20px);
+}
+
+.slide-select{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#arrow_menu{
+    background-color: whitesmoke;
+    height: 70px;
+    width: 70px;
+    margin: 10px 0;
+    transition: background-color 0.25s ease;
+}
+
+#arrow{
+    color:black;
+    font-size: 4.5em;
+    font-weight: bold;
+}
+
+#arrow_menu:hover{
+    background-color: hsl(0, 0%, 80%);
+}
+
+#arrow_menu:active{
+    background-color: hsl(0, 0%, 85%);
+    border: none;
+}
+
+@media (orientation: portrait){
+    .slide_counter{
+        top: 110px;
+    }
+
+    .slide-select{
+        flex-direction: row;
+        justify-content: center;
+        height: fit-content;
+        left: 0;
+        right: 0;
+        bottom: 95px;
+        top: unset;
+        transform: none;
+    }
+
+    .slide-select #arrow_menu{
+        margin: 0 40px;
+        transform: rotate(-90deg) scale(1.3);
+    }
+}

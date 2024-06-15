@@ -5,7 +5,7 @@ import AnimatedMain from '../animations/AnimatedMain';
 import ArticleCard from '../components/ArticleCard';
 import CategoriesNames from '../components/CategoriesNames';
 import '../css/categories.css';
-
+import '../css/slide.css';
 
 const Categories = () => {
     const nav = useNavigate();
@@ -36,12 +36,14 @@ const Categories = () => {
     const handleClick = (ix) => {
         ix=ix+exact_id;
         nav('/article', { state: { def: ix } }); 
-    };
+    }
 
     return (
-        <AnimatedMain className="h-fluid flex column main-art">
-            <div className={`grid-header ${CategoriesNames[i].color}`}>
-                <h1>{CategoriesNames[i].name}</h1>
+        <AnimatedMain className="h-fluid flex column main-cat">
+            <div className='flex slide_counter layer1'>
+                <p id='current_slide'>{i+1}</p>
+                <p>/</p>
+                <p id='total_slide'>{maxC+1}</p>
             </div>
             <div className='h-fluid grid article_categoria'>
                 {
@@ -50,7 +52,7 @@ const Categories = () => {
                     })
                 }
             </div>
-            <div className='flex column cat-select'>
+            <div className='flex column slide-select'>
                 <button id='arrow_menu' className='circle' onClick={inc}><span id="arrow" className="material-symbols-outlined circle">keyboard_arrow_up</span></button>
                 <button id='arrow_menu' className='circle' onClick={dec}><span id="arrow" className="material-symbols-outlined circle">keyboard_arrow_down</span></button>
             </div>
