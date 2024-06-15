@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import React from 'react';
 import AnimatedMain from '../animations/AnimatedMain';
 import FormattedTitles from '../components/FormattedTitles';
-import data from '../data/article-text.json';
+import ArticleLayout from '../components/ArticleLayout';
 import '../css/article.css';
 
 const Article = () => {
@@ -51,6 +51,7 @@ const Article = () => {
                         {FormattedTitles[id].title()}
                     </div>
                 </button>
+                <ArticleLayout id='0'/>
             </div>
             <div className='flex column'>
                 <button id='arrow_menu' className='circle' onClick={increment}><span id="arrow" className="material-symbols-outlined circle">keyboard_arrow_up</span></button>

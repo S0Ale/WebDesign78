@@ -23,16 +23,26 @@
     max-height: 400px;
 }
 
+.article_textbox .cont-article{
+    display: none;
+}
+
+
 .article_textbox_expand .article{
     display: none;
+}
+
+.article_textbox_expand .cont-article{
+    display: block;
 }
 
 .article_textbox_expand{
     position: relative;
     width: 650px;
-    height: 70%;
+    height: 65%;
     padding: 10px; 
     background-color: #C8D2D2;
+    overflow-y: scroll;
 }
 
 .article_textbox_expand h1{
