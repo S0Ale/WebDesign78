@@ -1,7 +1,7 @@
 const CategoriesNames = [
     {
         color: 'red',
-        name: 'TANTO I MURI SONO SOLO IN AMERICA (fisici)',
+        name: 'TANTO I MURI SONO SOLO IN AMERICA',
         index: [1,6,9,14,17,22]
     },
 
@@ -13,13 +13,13 @@ const CategoriesNames = [
 
     {
         color: 'orange',
-        name: 'QUELL’IRRESISTIBILE VOGLIA DI MURI (politici)',
+        name: 'QUELL’IRRESISTIBILE VOGLIA DI MURI',
         index: [2,5,10,13,18,21]
     },
 
     {
         color: 'blue',
-        name: 'MA IL MARE MICA È UN MURO (mare)',
+        name: 'MA IL MARE MICA È UN MURO',
         index: [3,4,11,12,19,20]
     }
 ]
