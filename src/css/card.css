@@ -1,0 +1,105 @@
+.grid-el{
+    background-color: transparent;
+    position: relative;
+    font-size: 1.1vw;
+    z-index: 0;
+}
+.grid-el::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: url('../assets/small.svg');
+    background-color: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: contrast(2);
+    z-index: -1;
+}
+
+.article{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s;
+    background-color: transparent;
+}
+.article:hover{
+    transform: scale(1.04);
+}
+
+.article .card-content{
+    position: relative;
+    transition: filter .2s;
+}
+.article:hover .card-content, .article:hover .article-header{
+    filter: grayscale(0.5);
+}
+
+.article .card-content{
+    margin: 0 0 30px 20px;
+}
+.medium .card-content{
+    margin: 0 0 100px 0;
+}
+.big .card-content{
+    margin: 100px 0 0 0;
+}
+
+.article-header{
+    position: absolute;
+    left: 10%;
+    right: 10%;
+
+    height: fit-content;
+    background-repeat: no-repeat;
+}
+.article-header{
+    bottom: 5%;
+}
+.article-grid .article:not(.big) .article-header{
+    left: 15%;
+    right: 5%;
+}
+.medium .article-header{
+    bottom: 15%;
+}
+.big .article-header{
+    top: 18%;
+}
+
+.article-header svg{
+    width: 100%;
+    height: 100%
+}
+
+.red svg g{
+    fill: var(--red-art);
+}
+.blue svg g{
+    fill: var(--blue-art);
+}
+.green svg g{
+    fill: var(--green-art);
+}
+.orange svg g{
+    fill: var(--orange-art);
+}
+
+@media only screen and (max-width: 768px){
+    .article .card-content{
+        margin: 0 0 10px 0;
+    }
+    .medium .card-content{
+        margin: 0 0 40px 0;
+    }
+    .big .card-content{
+        margin: 50px 0 0 0;
+    }
+}

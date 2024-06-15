@@ -18,21 +18,20 @@
     padding-bottom: 30px;
     padding-left: 20px;
     padding-right: 20px;
+    align-items: center;
+}
+
+.title{
+    width: 100%;
 }
 
 .description{
-    margin: auto;
     width: 80%;
     font-size: 28px;
     padding: 20px;
     text-align: center;
-    font-weight: 700;
-}
-
-.start{
-    width: 30%;
-    margin: auto;
-    text-align: center;
+    font-weight: 600;
+    font-family: var(--text-family);
 }
 
 .front-btn{
@@ -42,7 +41,7 @@
     border-radius: 0%;
     margin: auto;
     color: whitesmoke;
-    background-color: black;
+    background-color: var(--button);
     padding: 5px 50px;
 }
 
@@ -64,3 +63,21 @@
 .footer ul li{
     margin: 0 10px;
 }
+
+/* -- Media Queries -- */
+
+@media only screen and (max-width: 992px){
+    .container{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container{
+        width: 100%;
+    }
+
+    .description{
+        font-size: 1.3em;
+    }
+} 

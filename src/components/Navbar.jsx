@@ -1,29 +1,58 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
+import DropdownMenu from './DropdownMenu';
+import SearchBar from './SearchBar';
 import GenButton from './GenButton';
-import Logo from '../assets/logo.png';
+import { Logo, LogoResponsive } from './Logos';
+import CategoriesNames from './CategoriesNames';
 
 const Navbar = () => {
+    const [navOpen, setNavOpen] = useState(false);
+    const navigate = useNavigate();
+
+    const toggleNav = () => {
+        setNavOpen(!navOpen);
+    };
+
+    const closeIfMobile = () => {
+        if(window.innerWidth <= 992) setNavOpen(false);
+    };
+
+    const navToCategory = (i) => {
+        closeIfMobile();
+        navigate('/categories', { state: { def:  i} });
+    };
+
     return (
         <nav className="col-12 flex row layer1">
             <div className="col-12 flex row nav-wrapper">
-                <div className="logo">
-                    <img src={Logo} alt=""/>
+                <Link to="/" className="logo">
+                    <Logo />
+                    <LogoResponsive />
+                </Link>
+
+                <div className={`h-fluid flex row links ${navOpen? 'nav-show' : ''}`}>
+                    <Link to="/articleGrid" className='nav-link' onClick={closeIfMobile}>Home</Link>
+                    <DropdownMenu>
+                        {
+                            CategoriesNames.map((category, index) => {
+                                return (
+                                    <a key={index} data={index} onClick={() => navToCategory(index)} 
+                                    className={`dropdown-item ${category.color}`}>
+                                        {category.name}
+                                    </a>
+                                );
+                            })
+                        }
+                    </DropdownMenu>
+                    <Link to="/about" className="nav-link" onClick={closeIfMobile}>About</Link>
                 </div>
-                <div className="h-fluid flex row links">
-                    <Link to="/" className='nav-link'>HOME</Link>
-                    <Link to="article" className="nav-link">INDICE ARTICOLI</Link>
-                    <Link to="about" className="nav-link">ABOUT</Link>
-                </div>
-                <div className="search-bar">
-                    <input type="text" placeholder="Search..." className="search-input" />
-                    <FontAwesomeIcon icon={faSearch} className="search-icon" />
-                </div>
-                <GenButton className="nav-drop-btn">
+                <SearchBar/>
+                <GenButton className="nav-toggle" onClick={toggleNav}>
                     <FontAwesomeIcon icon={faBars}/>
                 </GenButton>
             </div>

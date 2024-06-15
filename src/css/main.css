@@ -14,7 +14,7 @@
 .col-9 {width: 75%;}
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
-.col-12 {width: 100%; background-color: rgb(233, 233, 233);}
+.col-12 {width: 100%;}
 
 .layer0{z-index: 0;}
 .layer1{z-index: 1;}
@@ -92,7 +92,9 @@ h1, h2, h3{
 }
 
 body{
-    background: url('./assets/sfondo_low.png') no-repeat cover;
+    background-image: url('../assets/sfondo_low.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     color: var(--text);
 }
 
@@ -113,6 +115,7 @@ button{
 nav{
     position: fixed;
     padding: 20px 35px;
+    background-color: var(--box);
 }
 
 .nav-wrapper{
@@ -122,15 +125,25 @@ nav{
 }
 
 .logo{
+    display: block;
     margin-right: 40px;
 }
 
-.logo img{
+.logo .logo-std{
+    width: 200px;
+}
+
+.logo-resp{
+    display: none;
     height: 35px;
 }
 
 .links{
-    align-items: center
+    align-items: center;
+}
+
+.nav-show{
+    display: flex;
 }
 
 .nav-link{
@@ -138,26 +151,63 @@ nav{
     margin: 0 10px;
     padding: 10px 25px;
     color: inherit;
-    font-family: var(--sub-family);
+    font-family: var(--text-family);
     font-weight: 500;
     transition: color .2s;
+    background: transparent;
+    cursor: pointer;
 }
 .nav-link:hover{
     color: var(--text-hover);
 }
+button.nav-link{
+    display: inline;
+    font-size: inherit;
+}
 
-.nav-drop-btn{
+.nav-toggle{
     display: none;
-    margin-right: 20px;
     padding: 10px 15px;
     background: transparent;
 }
 
-.nav-drop-btn svg{
-    height: 1.4em;
+.nav-toggle svg{
+    height: 1em;
 }
 
-/* -- Serach Nav -- */
+.dropdown{
+    position: relative;
+}
+.dropdown:hover{
+    color: inherit;
+}
+.dropdown span{
+    transition: color .2s;
+}
+.dropdown:hover span{
+    color: var(--text-hover);
+}
+
+.dropdown-menu{
+    position: absolute;
+    left: 0;
+    top: calc(100% + 14px);
+    background: var(--box);
+}
+
+.dropdown-item{
+    font-size: .9em;
+    padding: 10px;
+    flex: 1;
+    min-width: fit-content;
+    white-space:nowrap;
+    transition: background .2s;
+}
+.dropdown-item:hover{
+    background: var(--nav-hover);
+}
+
+/* -- Search Nav -- */
 
 .search-bar {
     display: flex;
@@ -187,12 +237,13 @@ nav{
     pointer-events: none; /* Prevents the icon from blocking input clicks */
 }
 
-.nav-drop-btn {
+.nav-toggle {
     background: none;
     border: none;
     cursor: pointer;
     font-size: 24px;
 }
+
 /* -- Footer -- */
 
 footer{
@@ -201,6 +252,7 @@ footer{
     bottom: 0;
     padding: 10px 20px;
     color: var(--text);
+    background-color: var(--box);
 }
 
 footer a{
@@ -229,19 +281,52 @@ footer svg:hover{
         justify-content: space-between;
     }
 
-    .logo img{
-        margin: 0 30px;
+    nav .logo{
+        margin-right: 0;
     }
 
     .links{
         display: none;
         position: absolute;
+        height: fit-content;
         right: 0;
-        bottom: -100%;
+        left: 0;
+        top: 100%;
         flex-direction: column;
+        align-items: end;
+        background-color: var(--box);
     }
 
-    .nav-drop-btn{
+    .nav-link{
+        text-align: center;
+        width: 100%;
+        margin: 0 0 0 20px;
+        padding-right: 20px 25px;
+        transition: transform .2s;
+    }
+
+    .nav-show{
+        display: flex !important;
+    }
+
+    .nav-toggle{
+        display: block;
+    }
+
+    .dropdown-menu{
+        position: static;
+    }
+
+    .dropdown-item{
+        padding: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    nav .logo-std{
+        display: none;
+    }
+    .logo-resp{
         display: block;
     }
 }
