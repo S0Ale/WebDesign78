@@ -7,42 +7,68 @@ import ArticleLayout from '../components/ArticleLayout';
 import '../css/article.css';
 
 const Article = () => {
+    const data = [
+        { id: 0, content: "First article content" },
+        { id: 1, content: "Second article content" },
+        { id: 2, content: "Third article content" },
+        { id: 3, content: "Fourth article content" },
+        { id: 4, content: "Fifth article content" },
+        { id: 5, content: "Sixth article content" },
+        { id: 6, content: "Seventh article content" },
+        { id: 7, content: "Eighth article content" },
+        { id: 8, content: "Ninth article content" },
+        { id: 9, content: "Tenth article content" },
+        { id: 10, content: "Eleventh article content" },
+        { id: 11, content: "Twelfth article content" },
+        { id: 12, content: "Thirteenth article content" },
+        { id: 13, content: "Fourteenth article content" },
+        { id: 14, content: "Fifteenth article content" },
+        { id: 15, content: "Sixteenth article content" },
+        { id: 16, content: "Seventeenth article content" },
+        { id: 17, content: "Eighteenth article content" },
+        { id: 18, content: "Nineteenth article content" },
+        { id: 19, content: "Twentieth article content" },
+        { id: 20, content: "Twentyeth article content" },
+        { id: 21, content: "Twentyfirst article content" },
+        { id: 22, content: "Twentysecond article content" },
+        { id: 23, content: "Twentythird article content" },
+        // Add more articles as needed
+    ];
+
     const minCount = 0;
-    const maxCount = 23;
+    const maxCount = data.length - 1;
     const location = useLocation();
-    const { def } = location.state || { def: minCount };
-    const [id, setCount] = useState(def);
-    const [classe, setClasse] = useState('article_textbox');
-    const [content, setContent] = useState(data[id]);
+    const { def = minCount } = location.state || {};
+    const [id, setId] = useState(def);
+    const [isExpanded, setIsExpanded] = useState(false);
+    const [content, setContent] = useState(data[id].content);
 
     useEffect(() => {
-        setCount(def);
-        setContent(data[def]);
+        setId(def);
+        setContent(data[def].content);
+        setIsExpanded(false); // Reset expanded state on article change
     }, [def]);
 
     const increment = () => {
-        setCount(prevCount => {
-            setClasse('article_textbox');
-            const newCount = prevCount >= maxCount ? minCount : prevCount + 1;
-            setContent(data[newCount]);
-            return newCount;
+        setId(prevId => {
+            const newId = prevId >= maxCount ? minCount : prevId + 1;
+            setContent(data[newId].content);
+            setIsExpanded(false); // Reset expanded state on article change
+            return newId;
         });
     };
 
     const decrement = () => {
-        setCount(prevCount => {
-            setClasse('article_textbox');
-            const newCount = prevCount <= minCount ? maxCount : prevCount - 1;
-            setContent(data[newCount]);
-            return newCount;
+        setId(prevId => {
+            const newId = prevId <= minCount ? maxCount : prevId - 1;
+            setContent(data[newId].content);
+            setIsExpanded(false); // Reset expanded state on article change
+            return newId;
         });
     };
 
     const readMore = () => {
-        setClasse('article_textbox_expand');
-        if (id === 0) {
-            setContent( " Il muro di Berlino sembrava un lontano ricordo. Quando quel 9 novembre 1989 una breccia si aprì nel muro all’epoca più famoso del mondo, l’Unione europea ancora non esisteva. Una nuova epoca stava nascendo. Eppure, a distanza di 30 anni, l’Europa è più fortificata di allora. Prima di quello straordinario evento in tutto il mondo si contavano 16 recinzioni. Oggi, solo nel Vecchio continente, si contano 16 muri. La metà degli Stati membri ne ha costruito uno lungo i propri confini. E se ai muri fisici, da quelli in cemento armato alle cortine di ferro, si aggiungono le barriere tecnologiche il numero sale ancora.");
-        }
+        setIsExpanded(true);
     };
 
     return (
@@ -52,13 +78,13 @@ const Article = () => {
                 <p>/</p>
                 <p id='total_slide'>{maxCount + 1}</p>
             </div>
-            <div className={classe}>
+            <div className={isExpanded ? 'article_textbox_expand' : 'article_textbox'}>
                 <button className='readMore grid-el article' onClick={readMore}>
                     <div className={FormattedTitles[id].class}>
                         {FormattedTitles[id].title()}
                     </div>
                 </button>
-                <ArticleLayout id={id}/>
+                <ArticleLayout id={id} content={content} />
             </div>
             <div className='flex column'>
                 <button id='arrow_menu' className='circle' onClick={increment}>
