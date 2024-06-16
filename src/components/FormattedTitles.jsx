@@ -6,7 +6,7 @@ const FormattedTitles = [
             <div className="line">Se non hai i</div>
             <div className="line"><span className="highlight2">MATTONI</span></div>
             <div className="line">usa i</div>
-            <div className="line"><span className="highlight1 vert">DRONI</span></div>
+            <div className="line"><span className="highlight1">DRONI</span></div>
         </>,
         title_plain: "Se non hai i MATTONI usa i DRONI"
     },
@@ -66,7 +66,8 @@ const FormattedTitles = [
     {
         class: 'red',
         title: () => <>
-            <div className="line down"><span className="highlight1">I MURI</span> non sono mai</div>
+            <div className="line down"><span className="highlight1">I MURI</span></div>
+            <div className="line left">non sono mai</div>
             <div className="line"><span className="highlight2">ABBASTANZA</span></div>
         </>,
         title_plain: "I MURI non sono mai ABBASTANZA"
@@ -155,10 +156,9 @@ const FormattedTitles = [
     {
         class: 'green',
         title: () => <>
-            <div className="line">Grecia:</div>
-            <div className="line down"><span className="highlight1">“</span><span className="highlight2">CHISSA'</span></div>
+            <div className="line down">Grecia:<span className="highlight1" style={{fontSize: '3em'}}>“</span><span className="highlight2">CHISSA'</span></div>
             <div className="line down"><span className="right-space highlight3">COSA</span> troveremo questa</div>
-            <div className="line"><span className="highlight1">VOLTA!”</span></div>
+            <div className="line"><span className="highlight1" style={{fontSize: '3em'}}>VOLTA!”</span></div>
         </>,
         title_plain: "Grecia: “CHISSA' cosa troveremo questa VOLTA!”"
     },
@@ -167,9 +167,9 @@ const FormattedTitles = [
         class: 'green',
         title: () => <>
             <div className="line">Non sai dove</div>
-            <div className="line"><span className="highlight2">METTERLO?</span></div>
-            <div className="line right">LASCIALO AL</div>
-            <div className="line right"><span className="highlight1" style={{fontSize: '3.2em'}}>CONFINE!</span></div>
+            <div className="line"><span className="highlight3">METTERLO?</span></div>
+            <div className="line">LASCIALO AL</div>
+            <div className="line right"><span className="highlight1" style={{fontSize: '3em'}}>CONFINE!</span></div>
         </>,
         title_plain: "Non sai dove METTERLO? LASCIALO AL CONFINE!"
     },
@@ -230,7 +230,7 @@ const FormattedTitles = [
         title: () => <>
             <div className="line down"><span className="right-space highlight3" style={{fontSize: '1.5em'}}>Croazia:</span> dai,</div>
             <div className="line"><span className="highlight3">PARTECIPIAMO</span></div>
-            <div className="line right">anche <span className="left-space highlight1">NOI</span></div>
+            <div className="line right">anche <span className="left-space highlight1" style={{lineHeight: '.8em'}}>NOI</span></div>
         </>,
         title_plain: "Croazia: dai, PARTECIPIAMO anche NOI"
     },
