@@ -120,7 +120,7 @@ const FormattedTitles = [
             <div className="line"><span className="highlight2 right-space">CHIUDIAMO</span></div>
             <div className="line right">un <span className="highlight1">OCCHIO</span></div>
         </>,
-        title_plain: "Tragedia nel mediterraneo. Si dai, CHIUDIAMO un OCCHIO "
+        title_plain: "Tragedia nel mediterraneo. Si dai, CHIUDIAMO un OCCHIO"
     },
     //id 12
     {
