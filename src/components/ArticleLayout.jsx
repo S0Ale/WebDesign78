@@ -1,4 +1,7 @@
 import React from 'react';
+
+import FormattedTitles from './FormattedTitles';
+import { ArticleHeader } from './Logos';
 import data from '../data/article-text.json';
 import '../css/article-content.css';
 
@@ -30,22 +33,25 @@ import blu6 from '../assets/articles_icons/blu-6.svg';
 const ArticleLayout = (props) => {
     const orderLogos = [verde2,rosso1,arancione1,blu1,blu2,arancione2,rosso2,verde1,verde5,rosso3,arancione3,blu5,blu3,arancione5,rosso4,verde3,verde4,rosso5,arancione4,blu4,blu6,arancione6,rosso6,verde6];
 
-    const names = props.className ? 'cont-article ${props.className}' : 'cont-article';
+    const names = props.className ? `cont-article ${props.className}` : 'cont-article';
     const idName = "art-" + props.id;
 
     return (
         <div className={names} id={idName}>
-            <div className='title-fake-article'>
-                {data[props.id].title_fake}
+            <div className={`article-header ${FormattedTitles[props.id].class}`}>
+                <ArticleHeader/>
             </div>
-            <div className='davvero-article'>
-                DAVVERO?
+            <div className={`fake-title ${FormattedTitles[props.id].class}`}>
+                {FormattedTitles[props.id].title()}
             </div>
-            <div className='title-real-article'>
+            <div className='real-subtitle'>
+                DAVVERO ?
+            </div>
+            <div className='real-title'>
                 {data[props.id].title_real}
             </div>
-            <div className='icon-article'>
-                <img src={orderLogos[props.id]}/>
+            <div className='icon-article debug1'>
+                <img className='art-icon debug2' src={orderLogos[props.id]}/>
             </div>
             <div className='paragraphs-article'>
                 {(data[props.id]).content.map((item, i) => (

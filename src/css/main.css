@@ -95,6 +95,7 @@ body{
     background-image: url('../assets/sfondo_low.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     color: var(--text);
 }
 

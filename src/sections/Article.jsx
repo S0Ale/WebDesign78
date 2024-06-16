@@ -53,6 +53,12 @@ const Article = () => {
         setIsExpanded(false); // Reset expanded state on article change
     }, [def]);
 
+    useEffect(() => {
+        if(!isExpanded) {
+            query('.article_textbox .readMore').style.display = 'flex';
+        }
+    }, [isExpanded]);
+
     const increment = () => {
         setId(prevId => {
             const newId = prevId >= maxCount ? minCount : prevId + 1;
@@ -78,7 +84,7 @@ const Article = () => {
     };
 
     return (
-        <AnimatedMain className="h-fluid flex main-art">
+        <AnimatedMain className={`h-fluid flex main-art ${isExpanded ? 'art-main-exp' : 'art-center'}`}>
             <div className='slide_counter flex layer1'>
                 <p id='current_slide'>{id+1}</p>
                 <p>/</p>
@@ -93,7 +99,7 @@ const Article = () => {
                         <ArticleHeader/>
                     </div>
                 </button>
-                <ArticleLayout id={id} content={content} />
+                <ArticleLayout className="flex column" id={id} content={content} />
             </div>
             <div className='flex column slide-select'>
                 <button id='arrow_menu' className='circle' onClick={decrement}><span id="arrow" className="material-symbols-outlined circle">keyboard_arrow_up</span></button>

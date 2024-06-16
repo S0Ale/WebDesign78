@@ -1,8 +1,8 @@
-.main-art {
-    align-items: center;
+.main-art{
     justify-content: center;
-    height: 100vh; /* Make sure the main container takes the full viewport height */
-    overflow: auto; /* Ensure the main container can scroll if content overflows */
+}
+.art-center{
+    align-items: center;
 }
 
 .article_textbox {
@@ -14,7 +14,6 @@
     width: 50vw;
     aspect-ratio: 16/12;
     padding: 5px;
-    overflow: hidden; /* Hide any overflow content */
 }
 
 .article_textbox .grid-el {
@@ -35,32 +34,6 @@
 
 .article_textbox .cont-article {
     display: none;
-}
-
-.article_textbox_expand {
-    position: relative;
-    width: 650px;
-    padding: 10px;
-    padding-top: 1000px;
-    padding-bottom: 50px;
-    background-color: #C8D2D2;
-    overflow-y: hidden; /* Hide vertical scrollbar */
-}
-
-.article_textbox_expand h1 {
-    font-size: 3em;
-    font-weight: bold;
-    margin: 15px 30px;
-}
-
-.article_textbox_expand h2 {
-    font-size: 1.3em;
-    margin: 0px 30px;
-}
-
-.article_textbox_expand p {
-    font-size: 1.2em;
-    margin: 0px 30px;
 }
 
 .readMore{
