@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import React from 'react';
 import AnimatedMain from '../animations/AnimatedMain';
-import FormattedTitles from '../components/FormattedTitles'; // Ensure this is correctly imported
-import data from '../data/article-text.json'; // Ensure this is correctly imported
+import FormattedTitles from '../components/FormattedTitles';
+import ArticleLayout from '../components/ArticleLayout';
 import '../css/article.css';
 
 const Article = () => {
@@ -58,7 +58,7 @@ const Article = () => {
                         {FormattedTitles[id].title()}
                     </div>
                 </button>
-                <p>{content}</p>
+                <ArticleLayout id={id}/>
             </div>
             <div className='flex column'>
                 <button id='arrow_menu' className='circle' onClick={increment}>
