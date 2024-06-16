@@ -23,7 +23,7 @@
 @media (orientation: landscape) {
     .article_categoria{
         width: 75%;
-        height: 60%;
+        height: 70%;
         
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -35,12 +35,12 @@
 @media (orientation: portrait) {
     .main-cat{
         justify-content: unset;
-        padding-top: 150px;
+        padding-top: 100px;
     }
     
     .article_categoria {
         width: 80%;
-        height: 70%;
+        height: 80%;
 
         --element-dim: 30vw;
         grid-template-columns: repeat(2, 1fr);
