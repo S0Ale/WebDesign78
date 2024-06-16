@@ -1,6 +1,6 @@
 .main-art{
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .article_textbox{
@@ -8,8 +8,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    height: 65%;
+    width: 50vw;
+    aspect-ratio: 16/12;
     padding: 5px; 
 }
 
@@ -18,9 +18,12 @@
     height: 100%;
     font-size: 2vw;
 }
+.article_textbox .grid-el::before{
+    background-image: url('../assets/big.svg') !important;
+}
 
-.article_textbox .article{
-    max-height: 400px;
+.article_textbox .article-header{
+    bottom: 15px;
 }
 
 .article_textbox_expand .article{
@@ -53,8 +56,37 @@
 }
 
 .readMore{
-    width: 100%;
-    height: 100%;
     background-color: transparent;
+}
+
+@media (orientation: portrait){
+    .article_textbox{
+        width: 70vw;
+    }
+    .article_textbox .card-content{
+        font-size: 1.2em;
+    }
+
+    .main-art .slide_counter{
+        width: 150px;
+    }
+
+    .main-art #total_slide {
+        transform: translate(-40px, 22px) rotate(90deg) !important;
+    }
+
+    .main-art .slide_counter #current_slide {
+        transform: translate(30px, -20px) rotate(90deg);
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .article_textbox{
+        width: 95vw;
+    }
+
+    .article_textbox .card-content{
+        font-size: 1.5em;
+    }
 }
 
