@@ -86,7 +86,13 @@
     }
 
     .article_textbox .card-content{
-        font-size: 1.5em;
+        font-size: 1.8em;
+    }
+}
+
+@media only screen and (min-width: 1700px){
+    .article_textbox{
+        width: 45vw;
     }
 }
 
