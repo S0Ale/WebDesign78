@@ -37,7 +37,7 @@ const Categories = () => {
 
     return (
         <AnimatedMain className="h-fluid flex column main-cat">
-            <div className='flex slide_counter layer1 debug1'>
+            <div className='flex slide_counter layer1'>
                 <p id='current_slide'>{category+1}</p>
                 <p>/</p>
                 <p id='total_slide'>{maxC+1}</p>
