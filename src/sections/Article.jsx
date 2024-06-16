@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import React from 'react';
 import AnimatedMain from '../animations/AnimatedMain';
-import ArticleCard from '../components/ArticleCard';
+import { ArticleHeader } from '../components/Logos';
 import FormattedTitles from '../components/FormattedTitles';
 import ArticleLayout from '../components/ArticleLayout';
+import { query } from '../scripts/utils';
 import '../css/article.css';
+import '../css/article-content.css';
 import '../css/slide.css';
 
 const Article = () => {
@@ -70,6 +72,8 @@ const Article = () => {
     };
 
     const readMore = () => {
+        // Hide read more button on click
+        query('.article_textbox .readMore').style.display = 'none';
         setIsExpanded(true);
     };
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArticleHeader } from '../components/Logos';
 import data from '../data/article-text.json';
 import '../css/article-content.css';
 
@@ -49,8 +48,8 @@ const ArticleLayout = (props) => {
                 <img src={orderLogos[props.id]}/>
             </div>
             <div className='paragraphs-article'>
-                {(data[props.id]).content.map(item => (
-                    <div className='paragraph-article'>
+                {(data[props.id]).content.map((item, i) => (
+                    <div key={i} className='paragraph-article'>
                         {item}
                     </div>
                 ))}
