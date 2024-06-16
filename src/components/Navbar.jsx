@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -9,10 +8,12 @@ import SearchBar from './SearchBar';
 import GenButton from './GenButton';
 import { Logo, LogoResponsive } from './Logos';
 import CategoriesNames from './CategoriesNames';
+import { CategoryContext } from "../App";
 
 const Navbar = () => {
     const [navOpen, setNavOpen] = useState(false);
     const navigate = useNavigate();
+    const { setCategory } = useContext(CategoryContext);
 
     const toggleNav = () => {
         setNavOpen(!navOpen);
@@ -24,7 +25,9 @@ const Navbar = () => {
 
     const navToCategory = (i) => {
         closeIfMobile();
-        navigate('/categories', { state: { def:  i} });
+        //navigate('/categories', { state: { def:  i} });
+        setCategory(i);
+        navigate('/categories');
     };
 
     return (
@@ -41,7 +44,7 @@ const Navbar = () => {
                         {
                             CategoriesNames.map((category, index) => {
                                 return (
-                                    <a key={index} data={index} onClick={() => navToCategory(index)} 
+                                    <a key={index} onClick={() => navToCategory(index)} 
                                     className={`dropdown-item ${category.color}`}>
                                         {category.name}
                                     </a>
