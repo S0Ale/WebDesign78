@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 import FormattedTitles from './FormattedTitles';
 import { ArticleHeader } from './Logos';
@@ -33,7 +35,9 @@ import blu6 from '../assets/articles_icons/blu6.png';
 const ArticleLayout = (props) => {
     const orderLogos = [verde2,rosso1,arancione1,blu1,blu2,arancione2,rosso2,verde1,verde5,rosso3,arancione3,blu5,blu3,arancione5,rosso4,verde3,verde4,rosso5,arancione4,blu4,blu6,arancione6,rosso6,verde6];
 
-    const names = props.className ? `cont-article ${props.className}` : 'cont-article';
+    const names = props.className ? 
+    `cont-article ${FormattedTitles[props.id].class}-art ${props.className}` : 
+    `cont-article ${FormattedTitles[props.id].class}-art`;
     const idName = "art-" + props.id;
 
     return (
@@ -51,18 +55,21 @@ const ArticleLayout = (props) => {
             <div className='real-title'>
                 {data[props.id].title_real}
             </div>
-            <div className='icon-article debug1'>
-                <img className='art-icon debug2' src={orderLogos[props.id]}/>
+            <div className='icon-article'>
+                <img className='art-icon' src={orderLogos[props.id]}/>
             </div>
-            <div className='paragraphs-article'>
+            <div className='flex column paragraphs-article debug1'>
                 {(data[props.id]).content.map((item, i) => (
-                    <div key={i} className='paragraph-article'>
+                    <div key={i} className='paragraph-article debug2'>
                         {item}
                     </div>
                 ))}
             </div>
             <div className='source-article'>
-                <a href={data[props.id].source}>Fonte articolo</a>
+                <a href={data[props.id].source}>
+                    Fonte articolo
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare}/>
+                </a>
             </div>
         </div>
     );

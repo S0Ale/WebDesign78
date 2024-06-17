@@ -91,8 +91,8 @@ const Article = () => {
                 <p id='total_slide'>{maxCount + 1}</p>
             </div>
             <div className={isExpanded ? 'article_textbox_expand' : 'article_textbox'}>
-                <button className='readMore grid-el article' onClick={readMore}>
-                    <div className={FormattedTitles[id].class}>
+                <button className={`readMore grid-el article ${FormattedTitles[id].class}`} onClick={readMore}>
+                    <div>
                         {FormattedTitles[id].title()}
                     </div>
                     <div className="article-header">
