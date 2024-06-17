@@ -1,6 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
-import React from 'react';
+import { ReactLenis } from 'lenis/react'
+
+import { gsap } from '../scripts/gsap';
 import AnimatedMain from '../animations/AnimatedMain';
 import { ArticleHeader } from '../components/Logos';
 import FormattedTitles from '../components/FormattedTitles';
@@ -47,6 +49,20 @@ const Article = () => {
     const [isExpanded, setIsExpanded] = useState(false);
     const [content, setContent] = useState(data[id].content);
 
+    const lenisRef = useRef();
+
+    useEffect(() => {
+        function update(time) {
+          lenisRef.current?.lenis?.raf(time * 1000)
+        }
+      
+        gsap.ticker.add(update)
+      
+        return () => {
+          gsap.ticker.remove(update)
+        }
+    });
+
     useEffect(() => {
         setId(def);
         setContent(data[def].content);
@@ -85,6 +101,7 @@ const Article = () => {
 
     return (
         <AnimatedMain className={`h-fluid flex main-art ${isExpanded ? 'art-main-exp' : 'art-center'}`}>
+            <ReactLenis ref={lenisRef} autoRaf={false} root>
             <div className='slide_counter flex layer1'>
                 <p id='current_slide'>{id+1}</p>
                 <p>/</p>
@@ -99,12 +116,13 @@ const Article = () => {
                         <ArticleHeader/>
                     </div>
                 </button>
-                <ArticleLayout className="flex column" id={id} content={content} />
+                <ArticleLayout className="flex column" key={id} id={id} content={content} isExpanded={isExpanded} />
             </div>
             <div className='flex column slide-select'>
                 <button id='arrow_menu' className='circle' onClick={decrement}><span id="arrow" className="material-symbols-outlined circle">keyboard_arrow_up</span></button>
                 <button id='arrow_menu' className='circle' onClick={increment}><span id="arrow" className="material-symbols-outlined circle">keyboard_arrow_down</span></button>
             </div>
+            </ReactLenis>
         </AnimatedMain>
     );
 };

@@ -1,6 +1,7 @@
-import React from 'react';
+import { useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { gsap, ScrollTrigger, useGSAP } from '../scripts/gsap';
 
 import FormattedTitles from './FormattedTitles';
 import { ArticleHeader } from './Logos';
@@ -33,15 +34,38 @@ import blu5 from '../assets/articles_icons/blu5.png';
 import blu6 from '../assets/articles_icons/blu6.png';
 
 const ArticleLayout = (props) => {
-    const orderLogos = [verde2,rosso1,arancione1,blu1,blu2,arancione2,rosso2,verde1,verde5,rosso3,arancione3,blu5,blu3,arancione5,rosso4,verde3,verde4,rosso5,arancione4,blu4,blu6,arancione6,rosso6,verde6];
+    const contRef = useRef(null);
 
+    useEffect(() => {
+    }, []);
+
+    useGSAP(() => {
+        if(props.isExpanded) {
+            gsap.to('.art-icon', {
+                scrollTrigger:{
+                    trigger: '.art-icon',
+                    toggleActions: "reset none none none",
+                    start: "top 80%",
+                    end: "top 20%",
+                    scrub: 1,
+                    markers: true,
+                },
+    
+                x: 400,
+                scale: .4,
+                duration: 1,
+            });
+        }
+    }, {scope: contRef, dependencies: [props.isExpanded]});
+
+    const orderLogos = [verde2,rosso1,arancione1,blu1,blu2,arancione2,rosso2,verde1,verde5,rosso3,arancione3,blu5,blu3,arancione5,rosso4,verde3,verde4,rosso5,arancione4,blu4,blu6,arancione6,rosso6,verde6];
     const names = props.className ? 
     `cont-article ${FormattedTitles[props.id].class}-art ${props.className}` : 
     `cont-article ${FormattedTitles[props.id].class}-art`;
     const idName = "art-" + props.id;
 
     return (
-        <div className={names} id={idName}>
+        <div className={names} id={idName} ref={contRef}>
             <div className='art-bg'></div>
             <div className={`article-header ${FormattedTitles[props.id].class}`}>
                 <ArticleHeader/>
