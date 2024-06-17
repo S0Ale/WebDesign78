@@ -92,7 +92,7 @@ const Article = () => {
             </div>
             <div className={isExpanded ? 'article_textbox_expand' : 'article_textbox'}>
                 <button className={`readMore grid-el article ${FormattedTitles[id].class}`} onClick={readMore}>
-                    <div>
+                    <div style={{position:'relative'}}>
                         {FormattedTitles[id].title()}
                     </div>
                     <div className="article-header">

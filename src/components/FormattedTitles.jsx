@@ -77,7 +77,7 @@ const FormattedTitles = [
         class: 'green',
         title: () => <>
             <div className="line">Il sogno del</div>
-            <div className="line"><span className="highlight1" style={{fontSize: '4.2em'}}>MURO</span></div>
+            <div className="line"><span className="highlight1">MURO</span></div>
             <div className="line"><span className="highlight3">AMERICANO</span></div>
         </>,
         title_plain: "Il SOGNO del MURO AMERICANO"
@@ -87,8 +87,8 @@ const FormattedTitles = [
         class: 'green',
         title: () => <>
             <div className="line" style={{fontSize: '1.1em'}}>Melilla,</div>
-            <div className="line"><span className="highlight1" style={{fontSize: '4.2em'}}>CHE</span></div>
-            <div className="line"><span className="highlight1" style={{fontSize: '4.2em'}}>FOLLA!</span></div>
+            <div className="line"><span className="highlight1">CHE</span></div>
+            <div className="line"><span className="highlight1">FOLLA!</span></div>
         </>,
         title_plain: "Melilla, CHE FOLLA!"
     },
