@@ -26,7 +26,19 @@
     position: relative;
     padding-top: 120px;
     z-index: 0;
+}
+.art-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
     background-image: var(--article-middle);
+    background-repeat: repeat-y;
+}
+.cont-article::before, .cont-article::after, .art-bg{
+    filter: contrast(1.2);
 }
 .cont-article::before, .cont-article::after{
     content: '';

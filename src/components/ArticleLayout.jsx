@@ -38,6 +38,7 @@ const ArticleLayout = (props) => {
 
     return (
         <div className={names} id={idName}>
+            <div className='art-bg'></div>
             <div className={`article-header ${FormattedTitles[props.id].class}`}>
                 <ArticleHeader/>
             </div>
