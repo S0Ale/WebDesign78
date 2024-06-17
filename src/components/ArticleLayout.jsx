@@ -32,29 +32,57 @@ import blu3 from '../assets/articles_icons/blu3.png';
 import blu4 from '../assets/articles_icons/blu4.png';
 import blu5 from '../assets/articles_icons/blu5.png';
 import blu6 from '../assets/articles_icons/blu6.png';
+import { query } from '../scripts/utils';
 
 const ArticleLayout = (props) => {
     const contRef = useRef(null);
 
-    useEffect(() => {
-    }, []);
-
     useGSAP(() => {
-        if(props.isExpanded) {
-            gsap.to('.art-icon', {
+        let posX = (contRef.current.getBoundingClientRect().right -
+        contRef.current.getBoundingClientRect().left)/ 2;
+
+        let posY = query('.paragraphs-article').offsetHeight + 100;
+
+        if(props.isExpanded){
+            let tl = gsap.timeline();
+            tl.to('.art-icon', {
                 scrollTrigger:{
                     trigger: '.art-icon',
-                    toggleActions: "reset none none none",
-                    start: "top 80%",
-                    end: "top 20%",
+                    toggleActions: "play none none none",
+                    start: "320px 50%",
+                    end: "120px 20%",
                     scrub: 1,
-                    markers: true,
                 },
     
-                x: 400,
+                x: posX,
                 scale: .4,
                 duration: 1,
+            })
+            .to('.art-icon', {
+                scrollTrigger:{
+                    trigger: '.art-icon',
+                    endTrigger: '.source-article',
+                    toggleActions: "play none none none",
+                    start: "120px 20%",
+                    end: "top 70%",
+                    scrub: 1.5,
+                    markers: true,
+                },
+                y: posY,
+                duration: 4.5,
+            })
+            .to('.art-icon', {
+                scrollTrigger:{
+                    trigger: '.source-article',
+                    toggleActions: "play none none none",
+                    start: "top 70%",
+                    end: "top 50%",
+                    //markers: true,
+                },
+                x: -100,
+                duration: 1,
             });
+            
         }
     }, {scope: contRef, dependencies: [props.isExpanded]});
 
@@ -82,7 +110,7 @@ const ArticleLayout = (props) => {
             <div className='icon-article'>
                 <img className='art-icon' src={orderLogos[props.id]}/>
             </div>
-            <div className='flex column paragraphs-article debug1'>
+            <div className='flex column paragraphs-article'>
                 {(data[props.id]).content.map((item, i) => (
                     <div key={i} className='paragraph-article debug2'>
                         {item}

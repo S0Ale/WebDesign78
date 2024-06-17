@@ -59,8 +59,9 @@
     background-image: var(--article-up);
 }
 .cont-article::after{
-    bottom: -130px;
-    height: 150px;
+    right: 0;
+    bottom: -140px;
+    height: 250px;
     background-image: var(--article-down);
 }
 
@@ -93,7 +94,7 @@
 }
 
 .icon-article{
-    margin: 4rem 0 150px 0;
+    margin: 4rem 0 75px 0;
 }
 
 .art-icon{
@@ -116,6 +117,7 @@
 }
 
 .source-article{
+    position: relative;
     padding: 0 4rem;
     font-size: 1.4rem;
     font-family: var(--title-family);
@@ -154,4 +156,14 @@
 }
 .source-article:hover svg path{
     fill: var(--color);
+}
+
+.source-article::after{
+    position: absolute;
+    content: '';
+    bottom: 9px;
+    right: 2rem;
+    width: 55%;
+    height: 3px;
+    background: var(--color);
 }
