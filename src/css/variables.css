@@ -30,4 +30,8 @@
 
     --text: #272727;
     --text-hover: #646464;
+
+    --article-up: url('../assets/article_parts/sopra.svg');
+    --article-middle: url('../assets/article_parts/centro.svg');
+    --article-down: url('../assets/article_parts/sotto.svg');
 }
