@@ -103,7 +103,49 @@
     height: var(--dim);
 }
 
+.art-line{
+    position: relative;
+}
+.art-line:nth-of-type(even){
+    justify-content: flex-end;
+}
+.path-checkpoint{
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    --x-value: 8rem;
+
+    bottom: 0;
+    right: var(--x-value);
+}
+.art-line .path-checkpoint:nth-of-type(even){
+    left: var(--x-value);
+    right: unset;
+}
+.art-line:nth-of-type(even) .path-checkpoint{
+    left: var(--x-value);
+    right: unset;
+}
+.art-line:nth-of-type(even) .path-checkpoint:nth-of-type(even){
+    right: var(--x-value);
+    left: unset;
+}
+
+.art-line:last-of-type .path-checkpoint{
+    bottom: 12rem;
+}
+
+.start-checkpoint{
+    --x-value: 12rem;
+    top: 0;
+    left: unset;
+    bottom: unset;
+    right: var(--x-value);
+}
+
 .paragraphs-article{
+    position: relative;
     padding: 0 4rem;
 }
 .paragraph-article{
@@ -111,9 +153,6 @@
     margin: 7rem 0;
     font-size: 1.2em;
     line-height: 1.7;
-}
-.paragraph-article:nth-child(even){
-    align-self: self-end;
 }
 
 .article-bold-a, .article-bold-r, .article-bold-b, .article-bold-v{

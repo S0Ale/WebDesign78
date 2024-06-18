@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import { gsap, ScrollTrigger, useGSAP } from '../scripts/gsap';
+import { gsap, useGSAP, ScrollTrigger } from '../scripts/gsap';
 
 import FormattedTitles from './FormattedTitles';
 import { ArticleHeader } from './Logos';
@@ -32,55 +32,51 @@ import blu3 from '../assets/articles_icons/blu3.png';
 import blu4 from '../assets/articles_icons/blu4.png';
 import blu5 from '../assets/articles_icons/blu5.png';
 import blu6 from '../assets/articles_icons/blu6.png';
-import { query } from '../scripts/utils';
+import { calculateMotionPath, query } from '../scripts/utils';
 
 const ArticleLayout = (props) => {
     const contRef = useRef(null);
 
     useGSAP(() => {
-        let posX = (contRef.current.getBoundingClientRect().right -
-        contRef.current.getBoundingClientRect().left)/ 2;
+        let icon = query('.art-icon');
 
-        let posY = query('.paragraphs-article').offsetHeight + 100;
+        let startX = query('.start-checkpoint').getBoundingClientRect().left-
+        (icon.getBoundingClientRect().left + icon.getBoundingClientRect().width /2);
+        let startY = query('.start-checkpoint').getBoundingClientRect().top-
+        (icon.getBoundingClientRect().top + icon.getBoundingClientRect().height /2);
 
         if(props.isExpanded){
+            let motionPath = {path: [], curviness: 0, alignOrigin: [0.5, 0.5]};
+            calculateMotionPath(startX, startY, motionPath);
+
             let tl = gsap.timeline();
             tl.to('.art-icon', {
-                scrollTrigger:{
-                    trigger: '.art-icon',
-                    toggleActions: "play none none none",
-                    start: "320px 50%",
-                    end: "120px 20%",
-                    scrub: 1,
-                },
-    
-                x: posX,
-                scale: .4,
-                duration: 1,
+                x: startX,
+                y: startY,
+                scale: .5,
+                duration: 2,
+                ease: 'none',
+            })
+            .to('.art-icon',{
+                immediateRender: false,
+                motionPath: motionPath,
+                duration: 20,
+                ease: 'none',
             })
             .to('.art-icon', {
-                scrollTrigger:{
-                    trigger: '.art-icon',
-                    endTrigger: '.source-article',
-                    toggleActions: "play none none none",
-                    start: "120px 20%",
-                    end: "top 70%",
-                    scrub: 1.5,
-                    markers: true,
-                },
-                y: posY,
-                duration: 4.5,
-            })
-            .to('.art-icon', {
-                scrollTrigger:{
-                    trigger: '.source-article',
-                    toggleActions: "play none none none",
-                    start: "top 70%",
-                    end: "top 50%",
-                    //markers: true,
-                },
-                x: -100,
-                duration: 1,
+                scale: .65,
+                duration: .2,
+            });
+
+            ScrollTrigger.create({
+                trigger: '.icon-article',
+                endTrigger: '.source-article',
+                animation: tl,
+                toggleActions: "play none none none",
+                start: "top 40%",
+                end: "bottom-=150px 50%",
+                scrub: 2,
+                markers: true,
             });
             
         }
@@ -115,8 +111,14 @@ const ArticleLayout = (props) => {
                 <img className='art-icon' src={orderLogos[props.id]}/>
             </div>
             <div className='flex column paragraphs-article'>
+                <span id='startPath' className='path-checkpoint start-checkpoint'></span>
                 {(data[props.id]).content.map((item, i) => (
-                    <div key={i} className='paragraph-article debug2' dangerouslySetInnerHTML={createMarkup(item)}/>
+                    <div key={i} className="flex row art-line">
+                        <div key={i} className='paragraph-article' 
+                        dangerouslySetInnerHTML={createMarkup(item)}/>
+                        <span className='path-checkpoint debug1'></span>
+                        <span className='path-checkpoint debug1'></span>
+                    </div>
                 ))}
             </div>
             <div className='source-article'>
