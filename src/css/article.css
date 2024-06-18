@@ -52,8 +52,8 @@
     .article_textbox{
         width: 70vw;
     }
-    .article_textbox .card-content{
-        font-size: 1.2em;
+    .article_textbox .grid-el{
+        font-size: 3.5vw;
     }
 
     .main-art .slide_counter{

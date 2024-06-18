@@ -231,3 +231,36 @@
     height: 3px;
     background: var(--color);
 }
+
+@media (orientation: portrait){
+    .article_textbox_expand{
+        width: 100%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .art-main-exp .slide_counter{
+        top: unset;
+        transform: rotate(-90deg);
+    }
+
+    .art-icon{
+        --dim: 250px;
+    }
+
+    .paragraph-article{
+        width: 100%;
+        margin: 3rem 0;
+        text-align: justify;
+    }
+
+    .source-article{
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .source-article::after{
+        width: 30%;
+    }
+}
