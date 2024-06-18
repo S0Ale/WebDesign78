@@ -29,6 +29,7 @@ function elementChildren (element) {
     return children;
 }
 
+// calculate the motion path for the icon (array of coordinates)
 function calculateMotionPath(startX, startY, motionPath = {path:[]}){
     let start = query('.start-checkpoint');
     let lines = query('.art-line', true);
@@ -37,7 +38,6 @@ function calculateMotionPath(startX, startY, motionPath = {path:[]}){
         let checkpoints = elementChildren(element).filter(child => child.classList.contains('path-checkpoint'));
         checkpoints.forEach((checkpoint, i) => {
             let coord = MotionPathPlugin.getRelativePosition(start, checkpoint, {x: 0, y: 0});
-            //console.log({element: checkpoint, c: coord});
             coord.x += startX;
             coord.y += startY;
 

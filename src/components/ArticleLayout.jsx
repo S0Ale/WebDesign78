@@ -40,6 +40,7 @@ const ArticleLayout = (props) => {
     useGSAP(() => {
         let icon = query('.art-icon');
 
+        // calculate path starting position
         let startX = query('.start-checkpoint').getBoundingClientRect().left-
         (icon.getBoundingClientRect().left + icon.getBoundingClientRect().width /2);
         let startY = query('.start-checkpoint').getBoundingClientRect().top-
@@ -76,7 +77,6 @@ const ArticleLayout = (props) => {
                 start: "top 40%",
                 end: "bottom-=150px 50%",
                 scrub: 2,
-                markers: true,
             });
             
         }
@@ -116,8 +116,8 @@ const ArticleLayout = (props) => {
                     <div key={i} className="flex row art-line">
                         <div key={i} className='paragraph-article' 
                         dangerouslySetInnerHTML={createMarkup(item)}/>
-                        <span className='path-checkpoint debug1'></span>
-                        <span className='path-checkpoint debug1'></span>
+                        <span className='path-checkpoint'></span>
+                        <span className='path-checkpoint'></span>
                     </div>
                 ))}
             </div>
