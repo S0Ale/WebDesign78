@@ -116,6 +116,26 @@
     align-self: self-end;
 }
 
+.article-bold-a, .article-bold-r, .article-bold-b, .article-bold-v{
+    font-weight: bold;
+}
+
+.article-bold-a{
+    color: var(--orange-art);
+}
+
+.article-bold-r{
+    color: var(--red-art);
+}
+
+.article-bold-b{
+    color: var(--blue-art);
+}
+
+.article-bold-v{
+    color: var(--green-art);
+}
+
 .source-article{
     position: relative;
     padding: 0 4rem;

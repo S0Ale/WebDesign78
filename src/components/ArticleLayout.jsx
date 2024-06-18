@@ -86,6 +86,10 @@ const ArticleLayout = (props) => {
         }
     }, {scope: contRef, dependencies: [props.isExpanded]});
 
+    const createMarkup = (htmlString) => {
+        return { __html: htmlString };
+    };
+
     const orderLogos = [verde2,rosso1,arancione1,blu1,blu2,arancione2,rosso2,verde1,verde5,rosso3,arancione3,blu5,blu3,arancione5,rosso4,verde3,verde4,rosso5,arancione4,blu4,blu6,arancione6,rosso6,verde6];
     const names = props.className ? 
     `cont-article ${FormattedTitles[props.id].class}-art ${props.className}` : 
@@ -112,9 +116,7 @@ const ArticleLayout = (props) => {
             </div>
             <div className='flex column paragraphs-article'>
                 {(data[props.id]).content.map((item, i) => (
-                    <div key={i} className='paragraph-article debug2'>
-                        {item}
-                    </div>
+                    <div key={i} className='paragraph-article debug2' dangerouslySetInnerHTML={createMarkup(item)}/>
                 ))}
             </div>
             <div className='source-article'>
