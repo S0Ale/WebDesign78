@@ -3,6 +3,11 @@
     height: fit-content;
 }
 
+.art-main-exp .slide_counter{
+    top: 50vh;
+    transform: translateY(-50%);
+}
+
 .article_textbox_expand{
     position: relative;
     margin-top: 180px;
