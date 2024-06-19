@@ -105,7 +105,7 @@
 
 .art-icon{
     margin: 0 auto;
-    --dim: 350px;
+    --dim: 400px;
     height: var(--dim);
 }
 
@@ -162,7 +162,8 @@
 }
 
 .article-bold-a, .article-bold-r, .article-bold-b, .article-bold-v{
-    font-weight: bold;
+    font-weight: 900;
+    font-family: var(--title-family);
 }
 
 .article-bold-a{
@@ -187,6 +188,7 @@
     font-size: 1.4rem;
     font-family: var(--title-family);
     font-weight: 700;
+    text-align: center;
 }
 .source-article a{
     display: inline-flex;
@@ -223,18 +225,25 @@
     fill: var(--color);
 }
 
-.source-article::after{
+.source-article::after, .source-article::before{
     position: absolute;
     content: '';
     bottom: 9px;
-    right: 2rem;
-    width: 55%;
     height: 3px;
     background: var(--color);
+}
+.source-article::before{
+    left: 2rem;
+    right: calc(50% + 5em);
+}
+.source-article::after{
+    right: 2rem;
+    left: calc(50% + 5em);
 }
 
 @media (orientation: portrait){
     .article_textbox_expand{
+        margin-top: 160px;
         width: 100%;
         margin-left: 1rem;
         margin-right: 1rem;
@@ -249,10 +258,13 @@
         --dim: 250px;
     }
 
+    .paragraphs-article{
+        padding: 0 2.5rem;
+    }
+
     .paragraph-article{
         width: 100%;
-        margin: 3rem 0;
-        text-align: justify;
+        margin: 2.5rem 0;
     }
 
     .source-article{
@@ -261,19 +273,12 @@
 }
 
 @media only screen and (max-width: 768px){
-    .source-article::after{
-        width: 30%;
-    }
-
     .art-main-exp .fake-title{
         font-size: 1.2em;
     }
 }
 
 @media only screen and (max-width: 500px){
-    .source-article::after{
-        width: 30%;
-    }
 
     .art-main-exp .fake-title{
         font-size: 1em;
