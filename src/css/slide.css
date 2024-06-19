@@ -101,7 +101,7 @@
     .slide-select #arrow_menu{
         --margin: 80px;
         margin: 0;
-        transform: rotate(-90deg) scale(1.3);
+        transform: rotate(-90deg);
     }
     .slide-select #arrow_menu:nth-child(1){
         margin-right: var(--margin);
