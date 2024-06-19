@@ -1,6 +1,7 @@
-import React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+import { ArticleContext } from '../App';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import FormattedTitles from './FormattedTitles';
@@ -8,6 +9,7 @@ import FormattedTitles from './FormattedTitles';
 const SearchBar = () => {
     const [inputValue, setInputValue] = useState('');
     const navigate = useNavigate();
+    const { setArticleId } = useContext(ArticleContext);
 
     const handleChange = (event) => {
         setInputValue(event.target.value);
@@ -19,7 +21,8 @@ const SearchBar = () => {
                 let title_low=FormattedTitles[c].title_plain.toLowerCase();
                 let input_low=inputValue.toLowerCase();
                 if(checkStringMatch(title_low, input_low)){
-                    navigate('/article', { state: { def: c }, replace: true });
+                    setArticleId(c);
+                    navigate('/article');
                     break;
                 }
             }
