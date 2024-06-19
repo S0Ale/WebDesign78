@@ -32,7 +32,7 @@ const router = createBrowserRouter(
   ),
   // il nostro url e' il nome della repo (github pages),  in questo modo
   // evitiamo di nominarrlo sempre nei link e nei path
-  {basename: '/WebDesign78'}
+  {basename: '/'}
 );
 
 ReactDOM.createRoot(document.getElementById('root')).render(
