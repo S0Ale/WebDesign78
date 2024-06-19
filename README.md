@@ -1,3 +1,6 @@
+Questa branch contiene il progetto pronto per il deploy sul dominio registrato.
+Per fare il deploy, eseguire il comando `npm run build`, prendere il contenuto nel folder `/dist` e caricarlo su altervista tramite ftp (va bene anche drag & drop)
+
 # Come testare
 
 ## Live test
