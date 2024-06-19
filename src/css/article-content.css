@@ -100,7 +100,19 @@
 }
 
 .icon-article{
+    position: relative;
     margin: 4rem 0 75px 0;
+    z-index: 0;
+}
+.icon-placeholder{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1;
+    filter: grayscale(1) brightness(0);
+    opacity: 0.5;
 }
 
 .art-icon{
@@ -252,6 +264,10 @@
     .art-main-exp .slide_counter{
         top: unset;
         transform: rotate(-90deg);
+    }
+
+    .icon-placeholder{
+        display: none;
     }
 
     .art-icon{

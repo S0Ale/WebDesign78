@@ -109,6 +109,7 @@ const ArticleLayout = (props) => {
                 {data[props.id].title_real}
             </div>
             <div className='icon-article'>
+                <img className="icon-placeholder" src={orderLogos[props.id]} />
                 <img className='art-icon' src={orderLogos[props.id]}/>
             </div>
             <div className='flex column paragraphs-article'>
