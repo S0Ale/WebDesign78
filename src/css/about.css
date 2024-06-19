@@ -1,0 +1,15 @@
+.about-main{
+    padding-top: 200px;
+}
+
+.about-cont{
+    margin: 0 auto;
+}
+
+.about-cont .title{
+    margin-bottom: 1rem;
+}
+
+.about-cont .title:not(:first-child){
+    margin-top: 1rem;
+}

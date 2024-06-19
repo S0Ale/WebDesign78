@@ -12,7 +12,7 @@
 
     --bgnd: #f0f0f0;
     --box: rgb(233, 233, 233);
-    --article-area-bg: rgba(255, 255, 255, 0.15);
+    --article-area-bg: transparent;
     --title-bg: rgba(255, 255, 255, 0.5);
 
     --red-art: #5d1b1d;

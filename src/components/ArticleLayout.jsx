@@ -55,7 +55,7 @@ const ArticleLayout = (props) => {
             tl.to('.art-icon', {
                 x: startX,
                 y: startY,
-                scale: .5,
+                scale: .48,
                 duration: 2,
                 ease: 'none',
             })
@@ -66,7 +66,7 @@ const ArticleLayout = (props) => {
                 ease: 'none',
             })
             .to('.art-icon', {
-                scale: .65,
+                scale: .68,
                 duration: .2,
             });
 
@@ -109,6 +109,7 @@ const ArticleLayout = (props) => {
                 {data[props.id].title_real}
             </div>
             <div className='icon-article'>
+                <img className="icon-placeholder" src={orderLogos[props.id]} />
                 <img className='art-icon' src={orderLogos[props.id]}/>
             </div>
             <div className='flex column paragraphs-article'>
@@ -123,7 +124,7 @@ const ArticleLayout = (props) => {
                 ))}
             </div>
             <div className='source-article'>
-                <a href={data[props.id].source}>
+                <a href={data[props.id].source} target='_blank'>
                     Fonte articolo
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare}/>
                 </a>

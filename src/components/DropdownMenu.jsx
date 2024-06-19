@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, useCycle } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
@@ -13,10 +13,19 @@ const menuAnimation = {
 };
 
 const DropdownMenu = (props) => {
-    const [active, setActive] = useCycle(false, true);
+    const [active, setActive] = useState(false);
+
+    // now i can open and close with a click, but also when i click 
+    // outside the menu
+    const close = () => {
+        setActive(false);
+    }
+    const toggle = () => {
+        setActive(!active);
+    }
 
     return (
-        <button className="nav-link dropdown" onClick={setActive}>
+        <button className="nav-link dropdown" onClick={toggle} onBlur={close}>
             <span>
                 Indice<FontAwesomeIcon style={{marginLeft: '.5em', fontSize: '.9em'}} icon={faChevronDown}/>
             </span>
