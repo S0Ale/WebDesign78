@@ -1,15 +1,20 @@
-import React from 'react';
+import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+import { ArticleContext } from '../App';
 import FormattedTitles from './FormattedTitles';
 import { ArticleHeader } from '../components/Logos';
 
 const ArticleCard = (props) => {
     const navigate = useNavigate();
+    const { setArticleId } = useContext(ArticleContext);
+
     const names = props.className ? `grid-el article ${props.className}` : 'grid-el article';
     const idName = "art-" + props.id;
     
     const handleClick = () => {
-        navigate('/article', { state: { def: props.id } });
+        setArticleId(props.id);
+        navigate('/article');
     };
     
     if(!FormattedTitles[props.id]) return <></>;

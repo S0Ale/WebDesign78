@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { gsap, useGSAP, ScrollTrigger } from '../scripts/gsap';
@@ -46,44 +46,42 @@ const ArticleLayout = (props) => {
         let startY = query('.start-checkpoint').getBoundingClientRect().top-
         (icon.getBoundingClientRect().top + icon.getBoundingClientRect().height /2);
 
-        if(props.isExpanded){
-            let motionPath = {path: [], curviness: 0, alignOrigin: [0.5, 0.5]};
-            calculateMotionPath(startX, startY, motionPath);
+        let motionPath = {path: [], curviness: 0, alignOrigin: [0.5, 0.5]};
+        calculateMotionPath(startX, startY, motionPath);
 
-            let mm = gsap.matchMedia();
-            mm.add('(min-width: 992px)', () => {
-                let tl = gsap.timeline();
-                tl.to('.art-icon', {
-                    x: startX,
-                    y: startY,
-                    scale: .5,
-                    duration: 2,
-                    ease: 'none',
-                })
-                .to('.art-icon',{
-                    immediateRender: false,
-                    motionPath: motionPath,
-                    duration: 20,
-                    ease: 'none',
-                })
-                .to('.art-icon', {
-                    scale: .65,
-                    duration: .2,
-                });
-
-                ScrollTrigger.create({
-                    trigger: '.icon-article',
-                    endTrigger: '.source-article',
-                    animation: tl,
-                    toggleActions: "play none none none",
-                    start: "top 40%",
-                    end: "bottom-=150px 50%",
-                    scrub: 2,
-                });
+        let mm = gsap.matchMedia();
+        mm.add('(min-width: 992px)', () => {
+            let tl = gsap.timeline();
+            tl.to('.art-icon', {
+                x: startX,
+                y: startY,
+                scale: .5,
+                duration: 2,
+                ease: 'none',
+            })
+            .to('.art-icon',{
+                immediateRender: false,
+                motionPath: motionPath,
+                duration: 20,
+                ease: 'none',
+            })
+            .to('.art-icon', {
+                scale: .65,
+                duration: .2,
             });
-            
-        }
-    }, {scope: contRef, dependencies: [props.isExpanded]});
+
+            ScrollTrigger.create({
+                trigger: '.icon-article',
+                endTrigger: '.source-article',
+                animation: tl,
+                toggleActions: "play none none none",
+                start: "top 40%",
+                end: "bottom-=150px 50%",
+                scrub: 2,
+            });
+        });
+
+    }, {scope: contRef});
 
     const createMarkup = (htmlString) => {
         return { __html: htmlString };

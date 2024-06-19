@@ -14,6 +14,7 @@ import Home from './sections/Home';
 import ArticleGrid from './sections/ArticleGrid';
 import Categories from './sections/Categories';
 import Article from './sections/Article';
+import ArticlePage from './sections/ArticlePage';
 import About from "./sections/About";
 
 const router = createBrowserRouter(
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<App><Outlet/></App>}>
       <Route exact path="/"index element={<Home />} />
       <Route path="/article" index element={<Article />} />
+      <Route path="/article/:id" element={<ArticlePage />} />
       <Route path="/categories" index element={<Categories />} />
       <Route path="/articleGrid" element={<ArticleGrid />} />
       <Route path="/about" element={<About />} />
